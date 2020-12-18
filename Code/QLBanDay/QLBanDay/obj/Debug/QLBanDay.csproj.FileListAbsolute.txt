@@ -37,7 +37,6 @@ F:\Hoc Chinh\C#\BaiTapLonVer2\QLBD\Code\QLBanDay\QLBanDay\bin\Debug\QLBanDay.exe
 F:\Hoc Chinh\C#\BaiTapLonVer2\QLBD\Code\QLBanDay\QLBanDay\bin\Debug\QLBanDay.pdb
 F:\Hoc Chinh\C#\BaiTapLonVer2\QLBD\Code\QLBanDay\QLBanDay\bin\Debug\FontAwesome.Sharp.dll
 F:\Hoc Chinh\C#\BaiTapLonVer2\QLBD\Code\QLBanDay\QLBanDay\obj\Debug\QLBanDay.csprojAssemblyReference.cache
-F:\Hoc Chinh\C#\BaiTapLonVer2\QLBD\Code\QLBanDay\QLBanDay\obj\Debug\QLBanDay.fAddCompany.resources
 F:\Hoc Chinh\C#\BaiTapLonVer2\QLBD\Code\QLBanDay\QLBanDay\obj\Debug\QLBanDay.fAddProduct.resources
 F:\Hoc Chinh\C#\BaiTapLonVer2\QLBD\Code\QLBanDay\QLBanDay\obj\Debug\QLBanDay.fcompany.resources
 F:\Hoc Chinh\C#\BaiTapLonVer2\QLBD\Code\QLBanDay\QLBanDay\obj\Debug\QLBanDay.fListProduct.resources
@@ -49,3 +48,5 @@ F:\Hoc Chinh\C#\BaiTapLonVer2\QLBD\Code\QLBanDay\QLBanDay\obj\Debug\QLBanDay.csp
 F:\Hoc Chinh\C#\BaiTapLonVer2\QLBD\Code\QLBanDay\QLBanDay\obj\Debug\QLBanDay.csproj.CopyComplete
 F:\Hoc Chinh\C#\BaiTapLonVer2\QLBD\Code\QLBanDay\QLBanDay\obj\Debug\QLBanDay.exe
 F:\Hoc Chinh\C#\BaiTapLonVer2\QLBD\Code\QLBanDay\QLBanDay\obj\Debug\QLBanDay.pdb
+F:\Hoc Chinh\C#\BaiTapLonVer2\QLBD\Code\QLBanDay\QLBanDay\obj\Debug\QLBanDay.GUI.FormProduct.fDetailProduct.resources
+F:\Hoc Chinh\C#\BaiTapLonVer2\QLBD\Code\QLBanDay\QLBanDay\obj\Debug\QLBanDay.GUI.FormProduct.fUpdateProduct.resources

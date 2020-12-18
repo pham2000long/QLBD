@@ -332,6 +332,7 @@ namespace QLBanDay
             this.iconBars.Size = new System.Drawing.Size(32, 32);
             this.iconBars.TabIndex = 4;
             this.iconBars.TabStop = false;
+            this.iconBars.Click += new System.EventHandler(this.iconBars_Click);
             // 
             // iconMininum
             // 

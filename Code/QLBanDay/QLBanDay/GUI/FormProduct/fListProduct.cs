@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QLBanDay.GUI.FormProduct;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -26,6 +27,18 @@ namespace QLBanDay
         private void btnAdd_Click(object sender, EventArgs e)
         {
             fAddProduct f = new fAddProduct();
+            f.ShowDialog();
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            fUpdateProduct f = new fUpdateProduct();
+            f.ShowDialog();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            fDetailProduct f = new fDetailProduct();
             f.ShowDialog();
         }
     }

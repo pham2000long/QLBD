@@ -29,9 +29,9 @@ namespace QLBanDay
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.btnSearch = new FontAwesome.Sharp.IconButton();
@@ -42,9 +42,11 @@ namespace QLBanDay
             this.dgvProduct = new System.Windows.Forms.DataGridView();
             this.idProduct = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameProduct = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.company = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.brandProduct = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sizeProduct = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.priceProduct = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusProduct = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descProduct = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
@@ -113,6 +115,7 @@ namespace QLBanDay
             this.btnEdit.Text = "Sửa";
             this.btnEdit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnDelete
             // 
@@ -132,6 +135,7 @@ namespace QLBanDay
             this.btnDelete.Text = "Xóa";
             this.btnDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnAdd
             // 
@@ -164,8 +168,8 @@ namespace QLBanDay
             // dgvProduct
             // 
             this.dgvProduct.AllowUserToResizeRows = false;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgvProduct.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgvProduct.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvProduct.BackgroundColor = System.Drawing.Color.White;
             this.dgvProduct.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvProduct.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
@@ -173,17 +177,19 @@ namespace QLBanDay
             this.dgvProduct.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idProduct,
             this.nameProduct,
-            this.company,
+            this.brandProduct,
+            this.sizeProduct,
             this.priceProduct,
-            this.statusProduct});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.2F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.LavenderBlush;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvProduct.DefaultCellStyle = dataGridViewCellStyle6;
+            this.statusProduct,
+            this.descProduct});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.2F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.LavenderBlush;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvProduct.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvProduct.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvProduct.GridColor = System.Drawing.Color.White;
             this.dgvProduct.Location = new System.Drawing.Point(0, 0);
@@ -201,17 +207,21 @@ namespace QLBanDay
             // nameProduct
             // 
             this.nameProduct.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.nameProduct.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.nameProduct.DefaultCellStyle = dataGridViewCellStyle2;
             this.nameProduct.HeaderText = "Tên";
             this.nameProduct.Name = "nameProduct";
             this.nameProduct.ReadOnly = true;
             // 
-            // company
+            // brandProduct
             // 
-            this.company.HeaderText = "Nhà cung cấp";
-            this.company.Name = "company";
-            this.company.ReadOnly = true;
+            this.brandProduct.HeaderText = "Nhãn hiệu";
+            this.brandProduct.Name = "brandProduct";
+            // 
+            // sizeProduct
+            // 
+            this.sizeProduct.HeaderText = "Kích thước";
+            this.sizeProduct.Name = "sizeProduct";
             // 
             // priceProduct
             // 
@@ -224,6 +234,12 @@ namespace QLBanDay
             this.statusProduct.HeaderText = "Trạng thái";
             this.statusProduct.Name = "statusProduct";
             this.statusProduct.ReadOnly = true;
+            // 
+            // descProduct
+            // 
+            this.descProduct.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.descProduct.HeaderText = "Mô tả";
+            this.descProduct.Name = "descProduct";
             // 
             // fListProduct
             // 
@@ -248,15 +264,17 @@ namespace QLBanDay
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dgvProduct;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idProduct;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameProduct;
-        private System.Windows.Forms.DataGridViewTextBoxColumn company;
-        private System.Windows.Forms.DataGridViewTextBoxColumn priceProduct;
-        private System.Windows.Forms.DataGridViewTextBoxColumn statusProduct;
         private FontAwesome.Sharp.IconButton btnAdd;
         private FontAwesome.Sharp.IconButton btnSearch;
         private System.Windows.Forms.TextBox txtSearch;
         private FontAwesome.Sharp.IconButton btnDelete;
         private FontAwesome.Sharp.IconButton btnEdit;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idProduct;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameProduct;
+        private System.Windows.Forms.DataGridViewTextBoxColumn brandProduct;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sizeProduct;
+        private System.Windows.Forms.DataGridViewTextBoxColumn priceProduct;
+        private System.Windows.Forms.DataGridViewTextBoxColumn statusProduct;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descProduct;
     }
 }

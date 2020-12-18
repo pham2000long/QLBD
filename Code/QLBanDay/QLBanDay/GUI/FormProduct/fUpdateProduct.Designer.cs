@@ -1,7 +1,7 @@
 ﻿
-namespace QLBanDay
+namespace QLBanDay.GUI.FormProduct
 {
-    partial class fAddProduct
+    partial class fUpdateProduct
     {
         /// <summary>
         /// Required designer variable.
@@ -29,117 +29,56 @@ namespace QLBanDay
         /// </summary>
         private void InitializeComponent()
         {
-            this.ionMaxinum = new FontAwesome.Sharp.IconPictureBox();
-            this.iconExit = new FontAwesome.Sharp.IconPictureBox();
-            this.iconMininum = new FontAwesome.Sharp.IconPictureBox();
-            this.panelAddProduct = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.iconMininum = new FontAwesome.Sharp.IconPictureBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.iconExit = new FontAwesome.Sharp.IconPictureBox();
+            this.ionMaxinum = new FontAwesome.Sharp.IconPictureBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.comboBox9 = new System.Windows.Forms.ComboBox();
             this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.comboBox7 = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.comboBox7 = new System.Windows.Forms.ComboBox();
-            this.comboBox9 = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.ionMaxinum)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconExit)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconMininum)).BeginInit();
-            this.panelAddProduct.SuspendLayout();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconMininum)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconExit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ionMaxinum)).BeginInit();
             this.SuspendLayout();
-            // 
-            // ionMaxinum
-            // 
-            this.ionMaxinum.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.ionMaxinum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(40)))));
-            this.ionMaxinum.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(239)))), ((int)(((byte)(115)))));
-            this.ionMaxinum.IconChar = FontAwesome.Sharp.IconChar.Circle;
-            this.ionMaxinum.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(239)))), ((int)(((byte)(115)))));
-            this.ionMaxinum.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.ionMaxinum.IconSize = 30;
-            this.ionMaxinum.Location = new System.Drawing.Point(1249, 11);
-            this.ionMaxinum.Name = "ionMaxinum";
-            this.ionMaxinum.Size = new System.Drawing.Size(30, 30);
-            this.ionMaxinum.TabIndex = 33;
-            this.ionMaxinum.TabStop = false;
-            this.ionMaxinum.Click += new System.EventHandler(this.ionMaxinum_Click);
-            // 
-            // iconExit
-            // 
-            this.iconExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(40)))));
-            this.iconExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.iconExit.IconChar = FontAwesome.Sharp.IconChar.Circle;
-            this.iconExit.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.iconExit.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.iconExit.IconSize = 30;
-            this.iconExit.Location = new System.Drawing.Point(1285, 11);
-            this.iconExit.Name = "iconExit";
-            this.iconExit.Size = new System.Drawing.Size(30, 30);
-            this.iconExit.TabIndex = 32;
-            this.iconExit.TabStop = false;
-            this.iconExit.Click += new System.EventHandler(this.iconExit_Click);
-            // 
-            // iconMininum
-            // 
-            this.iconMininum.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconMininum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(40)))));
-            this.iconMininum.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(134)))), ((int)(((byte)(60)))));
-            this.iconMininum.IconChar = FontAwesome.Sharp.IconChar.Circle;
-            this.iconMininum.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(134)))), ((int)(((byte)(60)))));
-            this.iconMininum.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.iconMininum.IconSize = 30;
-            this.iconMininum.Location = new System.Drawing.Point(1213, 11);
-            this.iconMininum.Name = "iconMininum";
-            this.iconMininum.Size = new System.Drawing.Size(30, 30);
-            this.iconMininum.TabIndex = 31;
-            this.iconMininum.TabStop = false;
-            this.iconMininum.Click += new System.EventHandler(this.iconMininum_Click);
-            // 
-            // panelAddProduct
-            // 
-            this.panelAddProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(40)))));
-            this.panelAddProduct.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelAddProduct.Controls.Add(this.panel2);
-            this.panelAddProduct.Controls.Add(this.panel3);
-            this.panelAddProduct.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelAddProduct.Location = new System.Drawing.Point(0, 0);
-            this.panelAddProduct.Name = "panelAddProduct";
-            this.panelAddProduct.Size = new System.Drawing.Size(1328, 534);
-            this.panelAddProduct.TabIndex = 0;
-            this.panelAddProduct.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelAddProduct_MouseDown);
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(40)))));
             this.panel2.Controls.Add(this.button1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 400);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 465);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1326, 129);
-            this.panel2.TabIndex = 35;
+            this.panel2.Size = new System.Drawing.Size(1328, 120);
+            this.panel2.TabIndex = 37;
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(239)))), ((int)(((byte)(115)))));
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(134)))), ((int)(((byte)(60)))));
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -148,7 +87,7 @@ namespace QLBanDay
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(114, 40);
             this.button1.TabIndex = 0;
-            this.button1.Text = "Thêm";
+            this.button1.Text = "Cập nhật";
             this.button1.UseVisualStyleBackColor = false;
             // 
             // panel3
@@ -175,6 +114,8 @@ namespace QLBanDay
             this.panel3.Controls.Add(this.label12);
             this.panel3.Controls.Add(this.label17);
             this.panel3.Controls.Add(this.label14);
+            this.panel3.Controls.Add(this.textBox2);
+            this.panel3.Controls.Add(this.label6);
             this.panel3.Controls.Add(this.textBox1);
             this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.textBox6);
@@ -182,9 +123,23 @@ namespace QLBanDay
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1326, 400);
-            this.panel3.TabIndex = 34;
-            this.panel3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelAddProduct_MouseDown);
+            this.panel3.Size = new System.Drawing.Size(1328, 465);
+            this.panel3.TabIndex = 36;
+            // 
+            // iconMininum
+            // 
+            this.iconMininum.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconMininum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(40)))));
+            this.iconMininum.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(134)))), ((int)(((byte)(60)))));
+            this.iconMininum.IconChar = FontAwesome.Sharp.IconChar.Circle;
+            this.iconMininum.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(134)))), ((int)(((byte)(60)))));
+            this.iconMininum.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.iconMininum.IconSize = 30;
+            this.iconMininum.Location = new System.Drawing.Point(1215, 11);
+            this.iconMininum.Name = "iconMininum";
+            this.iconMininum.Size = new System.Drawing.Size(30, 30);
+            this.iconMininum.TabIndex = 31;
+            this.iconMininum.TabStop = false;
             // 
             // label11
             // 
@@ -197,15 +152,55 @@ namespace QLBanDay
             this.label11.TabIndex = 5;
             this.label11.Text = "Thông tin chi tiết nhà cung cấp";
             // 
+            // iconExit
+            // 
+            this.iconExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(40)))));
+            this.iconExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.iconExit.IconChar = FontAwesome.Sharp.IconChar.Circle;
+            this.iconExit.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.iconExit.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.iconExit.IconSize = 30;
+            this.iconExit.Location = new System.Drawing.Point(1287, 11);
+            this.iconExit.Name = "iconExit";
+            this.iconExit.Size = new System.Drawing.Size(30, 30);
+            this.iconExit.TabIndex = 32;
+            this.iconExit.TabStop = false;
+            // 
+            // ionMaxinum
+            // 
+            this.ionMaxinum.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ionMaxinum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(40)))));
+            this.ionMaxinum.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(239)))), ((int)(((byte)(115)))));
+            this.ionMaxinum.IconChar = FontAwesome.Sharp.IconChar.Circle;
+            this.ionMaxinum.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(239)))), ((int)(((byte)(115)))));
+            this.ionMaxinum.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.ionMaxinum.IconSize = 30;
+            this.ionMaxinum.Location = new System.Drawing.Point(1251, 11);
+            this.ionMaxinum.Name = "ionMaxinum";
+            this.ionMaxinum.Size = new System.Drawing.Size(30, 30);
+            this.ionMaxinum.TabIndex = 33;
+            this.ionMaxinum.TabStop = false;
+            // 
             // comboBox3
             // 
             this.comboBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(272, 83);
+            this.comboBox3.Location = new System.Drawing.Point(274, 83);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(458, 33);
             this.comboBox3.TabIndex = 3;
+            // 
+            // comboBox9
+            // 
+            this.comboBox9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox9.FormattingEnabled = true;
+            this.comboBox9.Location = new System.Drawing.Point(523, 310);
+            this.comboBox9.Name = "comboBox9";
+            this.comboBox9.Size = new System.Drawing.Size(211, 33);
+            this.comboBox9.TabIndex = 3;
             // 
             // comboBox5
             // 
@@ -215,7 +210,7 @@ namespace QLBanDay
             this.comboBox5.Items.AddRange(new object[] {
             "Nam",
             "Nữ"});
-            this.comboBox5.Location = new System.Drawing.Point(1019, 225);
+            this.comboBox5.Location = new System.Drawing.Point(1021, 225);
             this.comboBox5.Name = "comboBox5";
             this.comboBox5.Size = new System.Drawing.Size(211, 33);
             this.comboBox5.TabIndex = 3;
@@ -225,27 +220,49 @@ namespace QLBanDay
             this.comboBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(768, 225);
+            this.comboBox4.Location = new System.Drawing.Point(770, 225);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(211, 33);
             this.comboBox4.TabIndex = 3;
+            // 
+            // comboBox7
+            // 
+            this.comboBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox7.FormattingEnabled = true;
+            this.comboBox7.Location = new System.Drawing.Point(274, 310);
+            this.comboBox7.Name = "comboBox7";
+            this.comboBox7.Size = new System.Drawing.Size(211, 33);
+            this.comboBox7.TabIndex = 3;
             // 
             // comboBox1
             // 
             this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(519, 225);
+            this.comboBox1.Location = new System.Drawing.Point(521, 225);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(211, 33);
             this.comboBox1.TabIndex = 3;
+            // 
+            // label7
+            // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label7.Location = new System.Drawing.Point(520, 284);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(64, 17);
+            this.label7.TabIndex = 1;
+            this.label7.Text = "Số lượng";
             // 
             // comboBox2
             // 
             this.comboBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(272, 225);
+            this.comboBox2.Location = new System.Drawing.Point(274, 225);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(211, 33);
             this.comboBox2.TabIndex = 3;
@@ -256,7 +273,7 @@ namespace QLBanDay
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label3.Location = new System.Drawing.Point(1016, 199);
+            this.label3.Location = new System.Drawing.Point(1018, 199);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(62, 17);
             this.label3.TabIndex = 1;
@@ -265,8 +282,9 @@ namespace QLBanDay
             // textBox7
             // 
             this.textBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox7.Enabled = false;
             this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(768, 150);
+            this.textBox7.Location = new System.Drawing.Point(770, 150);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(462, 30);
             this.textBox7.TabIndex = 6;
@@ -277,11 +295,23 @@ namespace QLBanDay
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label2.Location = new System.Drawing.Point(765, 199);
+            this.label2.Location = new System.Drawing.Point(767, 199);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(63, 17);
             this.label2.TabIndex = 1;
             this.label2.Text = "Chất liệu";
+            // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label5.Location = new System.Drawing.Point(271, 284);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(73, 17);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Nhãn hiệu";
             // 
             // label18
             // 
@@ -289,7 +319,7 @@ namespace QLBanDay
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label18.Location = new System.Drawing.Point(269, 57);
+            this.label18.Location = new System.Drawing.Point(271, 57);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(72, 17);
             this.label18.TabIndex = 1;
@@ -301,7 +331,7 @@ namespace QLBanDay
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label1.Location = new System.Drawing.Point(516, 199);
+            this.label1.Location = new System.Drawing.Point(518, 199);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(61, 17);
             this.label1.TabIndex = 1;
@@ -314,9 +344,9 @@ namespace QLBanDay
             this.label12.ForeColor = System.Drawing.Color.Gainsboro;
             this.label12.Location = new System.Drawing.Point(66, 46);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(161, 24);
+            this.label12.Size = new System.Drawing.Size(190, 24);
             this.label12.TabIndex = 6;
-            this.label12.Text = "Thêm sản phẩm";
+            this.label12.Text = "Cập nhật sản phẩm";
             // 
             // label17
             // 
@@ -324,7 +354,7 @@ namespace QLBanDay
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label17.Location = new System.Drawing.Point(269, 199);
+            this.label17.Location = new System.Drawing.Point(271, 199);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(35, 17);
             this.label17.TabIndex = 1;
@@ -336,17 +366,38 @@ namespace QLBanDay
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label14.Location = new System.Drawing.Point(765, 127);
+            this.label14.Location = new System.Drawing.Point(767, 127);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(27, 17);
             this.label14.TabIndex = 5;
             this.label14.Text = "Mã";
             // 
+            // textBox1
+            // 
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(770, 313);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(458, 30);
+            this.textBox1.TabIndex = 6;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label4.Location = new System.Drawing.Point(767, 290);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(79, 17);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Mô tả ngắn";
+            // 
             // textBox6
             // 
             this.textBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(272, 150);
+            this.textBox6.Location = new System.Drawing.Point(274, 150);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(458, 30);
             this.textBox6.TabIndex = 6;
@@ -357,127 +408,83 @@ namespace QLBanDay
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label13.Location = new System.Drawing.Point(269, 127);
+            this.label13.Location = new System.Drawing.Point(271, 127);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(99, 17);
             this.label13.TabIndex = 5;
             this.label13.Text = "Tên sản phẩm";
             // 
-            // label5
+            // label6
             // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label5.Location = new System.Drawing.Point(269, 284);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(73, 17);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Nhãn hiệu";
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label6.Location = new System.Drawing.Point(271, 371);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(43, 17);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "Mô tả";
             // 
-            // label7
+            // textBox2
             // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label7.Location = new System.Drawing.Point(518, 284);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(64, 17);
-            this.label7.TabIndex = 1;
-            this.label7.Text = "Số lượng";
+            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(274, 394);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(458, 30);
+            this.textBox2.TabIndex = 6;
             // 
-            // comboBox7
-            // 
-            this.comboBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Location = new System.Drawing.Point(272, 310);
-            this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(211, 33);
-            this.comboBox7.TabIndex = 3;
-            // 
-            // comboBox9
-            // 
-            this.comboBox9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox9.FormattingEnabled = true;
-            this.comboBox9.Location = new System.Drawing.Point(521, 310);
-            this.comboBox9.Name = "comboBox9";
-            this.comboBox9.Size = new System.Drawing.Size(211, 33);
-            this.comboBox9.TabIndex = 3;
-            // 
-            // label4
-            // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label4.Location = new System.Drawing.Point(765, 290);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(79, 17);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Mô tả ngắn";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(768, 313);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(458, 30);
-            this.textBox1.TabIndex = 6;
-            // 
-            // fAddProduct
+            // fUpdateProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1328, 534);
-            this.Controls.Add(this.panelAddProduct);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "fAddProduct";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Load += new System.EventHandler(this.fAddProduct_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.ionMaxinum)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconExit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconMininum)).EndInit();
-            this.panelAddProduct.ResumeLayout(false);
+            this.ClientSize = new System.Drawing.Size(1328, 585);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel3);
+            this.Name = "fUpdateProduct";
+            this.Text = "fUpdateProduct";
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconMininum)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconExit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ionMaxinum)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private FontAwesome.Sharp.IconPictureBox ionMaxinum;
-        private FontAwesome.Sharp.IconPictureBox iconExit;
-        private FontAwesome.Sharp.IconPictureBox iconMininum;
-        private System.Windows.Forms.Panel panelAddProduct;
+
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel3;
+        private FontAwesome.Sharp.IconPictureBox iconMininum;
         private System.Windows.Forms.Label label11;
+        private FontAwesome.Sharp.IconPictureBox iconExit;
+        private FontAwesome.Sharp.IconPictureBox ionMaxinum;
         private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox comboBox9;
+        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ComboBox comboBox7;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox9;
-        private System.Windows.Forms.ComboBox comboBox7;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label6;
     }
 }

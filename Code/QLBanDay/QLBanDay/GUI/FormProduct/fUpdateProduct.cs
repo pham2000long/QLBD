@@ -8,19 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QLBanDay
+namespace QLBanDay.GUI.FormProduct
 {
-    public partial class fcompany : Form
+    public partial class fUpdateProduct : Form
     {
-        common commomMethodFn = new common();
-        public fcompany()
+        public fUpdateProduct()
         {
             InitializeComponent();
-        }
-
-        private void fcompany_Load(object sender, EventArgs e)
-        {
-            commomMethodFn.changeColordgv(dgvCompany);
         }
     }
 }

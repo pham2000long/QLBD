@@ -186,7 +186,7 @@ namespace QLBanDay
             //OpenChildForm(new fBill());
         }
 
-        private void iconLogOut_Click(object sender, EventArgs e)
+        private void iconBars_Click(object sender, EventArgs e)
         {
             showSubMenu(panelBars);
         }
@@ -236,5 +236,6 @@ namespace QLBanDay
         {
 
         }
+
     }
 }
