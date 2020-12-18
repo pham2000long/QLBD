@@ -50,63 +50,63 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controllers\BLL.cs" />
-    <Compile Include="Controllers\common.cs" />
-    <Compile Include="Models\DAL.cs" />
-    <Compile Include="Views\FormProduct\fAddCompany.cs">
+    <Compile Include="BLL\BLL.cs" />
+    <Compile Include="BLL\common.cs" />
+    <Compile Include="DAL\DAL.cs" />
+    <Compile Include="GUI\FormProduct\fAddCompany.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\FormProduct\fAddCompany.Designer.cs">
+    <Compile Include="GUI\FormProduct\fAddCompany.Designer.cs">
       <DependentUpon>fAddCompany.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\FormProduct\fAddProduct.cs">
+    <Compile Include="GUI\FormProduct\fAddProduct.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\FormProduct\fAddProduct.Designer.cs">
+    <Compile Include="GUI\FormProduct\fAddProduct.Designer.cs">
       <DependentUpon>fAddProduct.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\FormProduct\fcompany.cs">
+    <Compile Include="GUI\FormProduct\fcompany.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\FormProduct\fcompany.Designer.cs">
+    <Compile Include="GUI\FormProduct\fcompany.Designer.cs">
       <DependentUpon>fcompany.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\FormProduct\fListProduct.cs">
+    <Compile Include="GUI\FormProduct\fListProduct.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\FormProduct\fListProduct.Designer.cs">
+    <Compile Include="GUI\FormProduct\fListProduct.Designer.cs">
       <DependentUpon>fListProduct.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\formCommon\fManager.cs">
+    <Compile Include="GUI\formCommon\fManager.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\formCommon\fManager.Designer.cs">
+    <Compile Include="GUI\formCommon\fManager.Designer.cs">
       <DependentUpon>fManager.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\formCommon\fLogin.cs">
+    <Compile Include="GUI\formCommon\fLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\formCommon\fLogin.Designer.cs">
+    <Compile Include="GUI\formCommon\fLogin.Designer.cs">
       <DependentUpon>fLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Views\FormProduct\fAddCompany.resx">
+    <EmbeddedResource Include="GUI\FormProduct\fAddCompany.resx">
       <DependentUpon>fAddCompany.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\FormProduct\fAddProduct.resx">
+    <EmbeddedResource Include="GUI\FormProduct\fAddProduct.resx">
       <DependentUpon>fAddProduct.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\FormProduct\fcompany.resx">
+    <EmbeddedResource Include="GUI\FormProduct\fcompany.resx">
       <DependentUpon>fcompany.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\FormProduct\fListProduct.resx">
+    <EmbeddedResource Include="GUI\FormProduct\fListProduct.resx">
       <DependentUpon>fListProduct.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\formCommon\fManager.resx">
+    <EmbeddedResource Include="GUI\formCommon\fManager.resx">
       <DependentUpon>fManager.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\formCommon\fLogin.resx">
+    <EmbeddedResource Include="GUI\formCommon\fLogin.resx">
       <DependentUpon>fLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -132,6 +132,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="DTO\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
