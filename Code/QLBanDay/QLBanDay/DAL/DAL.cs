@@ -8,5 +8,6 @@ namespace QLBanDay
 {
     class DAL
     {
+
     }
 }
