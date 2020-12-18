@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace QLBanDay
+namespace QLBanDay.BLL
 {
-    class BLL
+    class productsBLL
     {
+
     }
 }

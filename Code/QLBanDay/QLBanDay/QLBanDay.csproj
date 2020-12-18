@@ -50,9 +50,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BLL\BLL.cs" />
     <Compile Include="BLL\common.cs" />
-    <Compile Include="DAL\DAL.cs" />
+    <Compile Include="BLL\productsBLL.cs" />
+    <Compile Include="BLL\usersBLL.cs" />
+    <Compile Include="DAL\dal.cs" />
+    <Compile Include="DTO\UsersDTO.cs" />
     <Compile Include="GUI\FormProduct\fAddCompany.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,8 +134,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DTO\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
