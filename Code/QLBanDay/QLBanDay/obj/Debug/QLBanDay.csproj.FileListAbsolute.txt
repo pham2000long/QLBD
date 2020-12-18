@@ -32,3 +32,20 @@ E:\BTL\QLBD\Code\QLBanDay\QLBanDay\obj\Debug\QLBanDay.csproj.CoreCompileInputs.c
 E:\BTL\QLBD\Code\QLBanDay\QLBanDay\obj\Debug\QLBanDay.csproj.CopyComplete
 E:\BTL\QLBD\Code\QLBanDay\QLBanDay\obj\Debug\QLBanDay.exe
 E:\BTL\QLBD\Code\QLBanDay\QLBanDay\obj\Debug\QLBanDay.pdb
+F:\Hoc Chinh\C#\BaiTapLonVer2\QLBD\Code\QLBanDay\QLBanDay\bin\Debug\QLBanDay.exe.config
+F:\Hoc Chinh\C#\BaiTapLonVer2\QLBD\Code\QLBanDay\QLBanDay\bin\Debug\QLBanDay.exe
+F:\Hoc Chinh\C#\BaiTapLonVer2\QLBD\Code\QLBanDay\QLBanDay\bin\Debug\QLBanDay.pdb
+F:\Hoc Chinh\C#\BaiTapLonVer2\QLBD\Code\QLBanDay\QLBanDay\bin\Debug\FontAwesome.Sharp.dll
+F:\Hoc Chinh\C#\BaiTapLonVer2\QLBD\Code\QLBanDay\QLBanDay\obj\Debug\QLBanDay.csprojAssemblyReference.cache
+F:\Hoc Chinh\C#\BaiTapLonVer2\QLBD\Code\QLBanDay\QLBanDay\obj\Debug\QLBanDay.fAddCompany.resources
+F:\Hoc Chinh\C#\BaiTapLonVer2\QLBD\Code\QLBanDay\QLBanDay\obj\Debug\QLBanDay.fAddProduct.resources
+F:\Hoc Chinh\C#\BaiTapLonVer2\QLBD\Code\QLBanDay\QLBanDay\obj\Debug\QLBanDay.fcompany.resources
+F:\Hoc Chinh\C#\BaiTapLonVer2\QLBD\Code\QLBanDay\QLBanDay\obj\Debug\QLBanDay.fListProduct.resources
+F:\Hoc Chinh\C#\BaiTapLonVer2\QLBD\Code\QLBanDay\QLBanDay\obj\Debug\QLBanDay.fManager.resources
+F:\Hoc Chinh\C#\BaiTapLonVer2\QLBD\Code\QLBanDay\QLBanDay\obj\Debug\QLBanDay.fLogin.resources
+F:\Hoc Chinh\C#\BaiTapLonVer2\QLBD\Code\QLBanDay\QLBanDay\obj\Debug\QLBanDay.Properties.Resources.resources
+F:\Hoc Chinh\C#\BaiTapLonVer2\QLBD\Code\QLBanDay\QLBanDay\obj\Debug\QLBanDay.csproj.GenerateResource.cache
+F:\Hoc Chinh\C#\BaiTapLonVer2\QLBD\Code\QLBanDay\QLBanDay\obj\Debug\QLBanDay.csproj.CoreCompileInputs.cache
+F:\Hoc Chinh\C#\BaiTapLonVer2\QLBD\Code\QLBanDay\QLBanDay\obj\Debug\QLBanDay.csproj.CopyComplete
+F:\Hoc Chinh\C#\BaiTapLonVer2\QLBD\Code\QLBanDay\QLBanDay\obj\Debug\QLBanDay.exe
+F:\Hoc Chinh\C#\BaiTapLonVer2\QLBD\Code\QLBanDay\QLBanDay\obj\Debug\QLBanDay.pdb
