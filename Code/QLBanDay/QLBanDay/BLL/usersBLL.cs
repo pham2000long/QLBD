@@ -14,10 +14,11 @@ namespace QLBanDay.BLL
        
         public bool getUsernamPassword(string usename, string password)
         {
-            string sql = "select * from users where username='"+usename+ "' AND password='"+password+"'";
-            DataTable dt = new DataTable();
-            dt = dal.GetTable(sql);
-            return dt.Rows.Count == 0 ? false : true;
+            //string sql = "select * from users where username='"+usename+ "' AND password='"+password+"'";
+            //DataTable dt = new DataTable();
+            //dt = dal.GetTable(sql);
+            //return dt.Rows.Count == 0 ? false : true;
+            return false;
         }
 
     }
