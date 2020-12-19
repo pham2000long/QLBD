@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QLBanDay
+namespace QLBanDay.GUI.FormProduct
 {
     public partial class fAddProduct : Form
     {
@@ -17,6 +17,12 @@ namespace QLBanDay
         {
             InitializeComponent();
         }
+
+        private void panel3_MouseMove(object sender, MouseEventArgs e)
+        {
+            commomMethodFn.MouseDown(this);
+        }
+
         private void fAddProduct_Load(object sender, EventArgs e)
         {
             this.FormBorderStyle = FormBorderStyle.None;
@@ -29,17 +35,12 @@ namespace QLBanDay
 
         private void ionMaxinum_Click(object sender, EventArgs e)
         {
-            commomMethodFn.Maxinum_Click(this);
+            commomMethodFn.Maxinum_Click(this); 
         }
 
         private void iconExit_Click(object sender, EventArgs e)
         {
             commomMethodFn.Exit_Click(this);
-        }
-
-        private void panelAddProduct_MouseDown(object sender, MouseEventArgs e)
-        {
-            commomMethodFn.MouseDown(this);
         }
     }
 }
