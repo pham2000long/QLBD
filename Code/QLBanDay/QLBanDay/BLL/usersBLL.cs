@@ -12,32 +12,32 @@ namespace QLBanDay.BLL
     {
         dal dal = new dal();
 
-        private List<UsersDTO> ListUsers(DataTable dt)
-        {
-            List<UsersDTO> listUsers = new List<UsersDTO>();
-            for (int i = 0; i < dt.Rows.Count; i++)
-            {
-                UsersDTO user = new UsersDTO();
-                user.UserName = "";
-                user.Password = "";
-                user.FullName = "";
-                //user.Gender = "";
-                user.Address = "";
-                user.Phone = "";
-                user.Email = "";
-                user.Avatar = "";
-                user.Roles = 0;
-                user.ID = int.Parse(dt.Rows[0].ItemArray[0].ToString());
-                user.UserName = dt.Rows[0].ItemArray[1].ToString();
-                user.Password = dt.Rows[0].ItemArray[2].ToString();
-                user.FullName = dt.Rows[0].ItemArray[3].ToString();
-                //user.Gender = dt.Rows[0].ItemArray[4].ToString();
-                user.Address = dt.Rows[0].ItemArray[5].ToString();
-                user.Phone = dt.Rows[0].ItemArray[6].ToString();
-                listUsers.Add(user);
-            }
-            return listUsers;
-        }
+        //private List<UsersDTO> ListUsers(DataTable dt)
+        //{
+        //    List<UsersDTO> listUsers = new List<UsersDTO>();
+        //    for (int i = 0; i < dt.Rows.Count; i++)
+        //    {
+        //        UsersDTO user = new UsersDTO();
+        //        user.UserName = "";
+        //        user.Password = "";
+        //        user.FullName = "";
+        //        //user.Gender = "";
+        //        user.Address = "";
+        //        user.Phone = "";
+        //        user.Email = "";
+        //        user.Avatar = "";
+        //        user.Roles = 0;
+        //        user.ID = int.Parse(dt.Rows[0].ItemArray[0].ToString());
+        //        user.UserName = dt.Rows[0].ItemArray[1].ToString();
+        //        user.Password = dt.Rows[0].ItemArray[2].ToString();
+        //        user.FullName = dt.Rows[0].ItemArray[3].ToString();
+        //        //user.Gender = dt.Rows[0].ItemArray[4].ToString();
+        //        user.Address = dt.Rows[0].ItemArray[5].ToString();
+        //        user.Phone = dt.Rows[0].ItemArray[6].ToString();
+        //        listUsers.Add(user);
+        //    }
+        //    return listUsers;
+        //}
        
         public bool getUsernamPassword(string usename, string password)
         {
@@ -48,19 +48,24 @@ namespace QLBanDay.BLL
             //return false;
         }
 
-        public DataTable showProduct()
+        public DataTable showUser()
         {
-            string sql = "select * from QLBanDay";
+            string sql = "select * from users";
             DataTable dt = new DataTable();
             dt = dal.GetTable(sql);
             return dt;
         }
 
-        public void insertProduct(UsersDTO user)
+        public void insertUser(string user, string pass, string fullName, int gender, string phone, string address, string email, string avartar, int roles)
         {
-            user.Created_at = DateTime.Now;
-            string sql = "insert into users(username, password, fullname, phone, address, email, avartar, roles, created_at) values (@0, @2, @3, @4, @5, @6, @7, @8)";
-            dal.ExecuteNonQuery(sql);
+            try
+            {
+                
+                string sql = "insert into users (username, password, fullname, gender, phone, address, email, avatar, roles) values ('" + user + "', '" + pass + "', N'" + fullName + "','" + gender + "','" + int.Parse(phone) + "', N'" + address + "', '" + email + "','" + avartar + "','" + roles + "')";
+                dal.ExecuteNonQuery(sql);
+            }
+            catch (Exception)
+            {}
         }
 
         //public void updateProduct(string mh, string th, string nn, int sl, Boolean tt, string ncc)
@@ -69,11 +74,11 @@ namespace QLBanDay.BLL
         //    dal.ExecuteNonQuery(sql);
         //}
 
-        //public void deleteProduct(string mh)
-        //{
-        //    string sql = "delete HangHoa where MaHang='" + mh + "'";
-        //    dal.ExecuteNonQuery(sql);
-        //}
+        public void deleteUser(string id)
+        {
+            string sql = "delete users where id='" + id + "'";
+            dal.ExecuteNonQuery(sql);
+        }
 
     }
 }

@@ -109,6 +109,19 @@
     <Compile Include="GUI\formCommon\fLogin.Designer.cs">
       <DependentUpon>fLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\User\fAddUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\User\fAddUser.Designer.cs">
+      <DependentUpon>fAddUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\User\fUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\User\fUser.Designer.cs">
+      <DependentUpon>fUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\User\userBLL.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GUI\Category\fAddCategory.resx">
@@ -134,6 +147,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\formCommon\fLogin.resx">
       <DependentUpon>fLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\User\fAddUser.resx">
+      <DependentUpon>fAddUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\User\fUser.resx">
+      <DependentUpon>fUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
