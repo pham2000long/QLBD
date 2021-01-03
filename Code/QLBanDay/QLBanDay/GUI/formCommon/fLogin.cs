@@ -29,43 +29,38 @@ namespace QLBanDay
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            //string error = "";
-            //if(txtAccount.Text == "")
-            //{
-            //    error = "User khong duoc de trong";
-            //}
-            //else if(txtPassword.Text == "")
-            //{
-            //    error = "Password khong duoc de trong";
-            //}
-            ////users.getUsernamPassword(txtAccount.Text, txtPassword.Text) != null
-            //if(error == "")
-            //{
-            //    string username = txtAccount.Text;
-            //    string password = txtPassword.Text;
-            //    if (!users.getUsernamPassword(username, password))
-            //    {
-            //        MessageBox.Show("Username or Password khong ton tai");
-            //    }
-            //    else
-            //    {
-            //        fManager f = new fManager();
-            //        this.Hide();
-            //        f.ShowDialog();
-            //        this.Show();
-            //    }
-            //}
+            string error = "";
+            if(txtAccount.Text == "")
+            {
+                error = "User khong duoc de trong";
+            }
+            else if(txtPassword.Text == "")
+            {
+                error = "Password khong duoc de trong";
+            }
+            //users.getUsernamPassword(txtAccount.Text, txtPassword.Text) != null
+            if(error == "")
+            {
+                string username = txtAccount.Text;
+                string password = txtPassword.Text;
+                if (!users.getUsernamPassword(username, password))
+                {
+                    MessageBox.Show("Username or Password khong ton tai");
+                }
+                else
+                {
+                    fManager f = new fManager();
+                    this.Hide();
+                    f.ShowDialog();
+                    this.Show();
+                }
+            }
             
-            //else
-            //{
-            //    MessageBox.Show(error);
-            //}
-
-            fManager f = new fManager();
-            this.Hide();
-            f.ShowDialog();
-            this.Show();
-
+            else
+            {
+                MessageBox.Show(error);
+            }
+            
         }
 
         private void btnExit_Click(object sender, EventArgs e)
