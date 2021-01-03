@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
+using QLBanDay.DTO;
 
 namespace QLBanDay
 {
@@ -16,6 +17,7 @@ namespace QLBanDay
             SqlConnection conn = new SqlConnection(connString);
             return conn;
         }
+        
         public DataTable GetTable(String sql)
         {
             try
@@ -32,12 +34,14 @@ namespace QLBanDay
             }
 
         }
+
         public void ExecuteNonQuery(String sql)
         {
+            SqlConnection con = getConnection();
             try
             {
-                SqlConnection con = getConnection();
-                con.Open();
+                if(con.State == ConnectionState.Closed)
+                    con.Open();
                 SqlCommand cmd = new SqlCommand(sql, con);
                 cmd.ExecuteNonQuery();
             }
