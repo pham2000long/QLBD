@@ -17,7 +17,7 @@ namespace QLBanDay.DTO
         public string Address { get; set; }
         public string Email { get; set; }
         public string Avatar { get; set; }
-        public int Roles { get; set; }
+        public string Roles { get; set; }
         public DateTime Created_at { get; set; }
         public DateTime Updated_at { get; set; }
     }

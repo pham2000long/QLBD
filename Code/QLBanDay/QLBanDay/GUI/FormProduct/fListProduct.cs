@@ -29,5 +29,10 @@ namespace QLBanDay
             fAddProduct f = new fAddProduct();
             f.ShowDialog();
         }
+
+        private void dgvProduct_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

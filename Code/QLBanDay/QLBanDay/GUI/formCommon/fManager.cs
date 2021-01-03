@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using FontAwesome.Sharp;
 using System.Runtime.InteropServices;
 using QLBanDay.GUI.FormProduct;
+using QLBanDay.GUI.User;
 
 namespace QLBanDay
 {
@@ -176,7 +177,7 @@ namespace QLBanDay
         {
             ActivateButton(sender, RGBColors.color5);
             //showSubMenu(panelEmployee);
-            //OpenChildForm(new fCustomer());
+            OpenChildForm(new fUser());
         }
 
         private void btnCustomer_Click(object sender, EventArgs e)
