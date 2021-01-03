@@ -51,6 +51,7 @@ namespace QLBanDay
 
         }
 
+        //
         public void ExecuteNonQuery(String sql)
         {
             SqlConnection con = getConnection();

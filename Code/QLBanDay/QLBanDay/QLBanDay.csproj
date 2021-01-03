@@ -55,6 +55,10 @@
     <Compile Include="BLL\productsBLL.cs" />
     <Compile Include="BLL\usersBLL.cs" />
     <Compile Include="DAL\dal.cs" />
+    <Compile Include="DTO\CategoriesDTO.cs" />
+    <Compile Include="DTO\OrdersDTO.cs" />
+    <Compile Include="DTO\Orders_detailDTO.cs" />
+    <Compile Include="DTO\ProductsDTO.cs" />
     <Compile Include="DTO\UsersDTO.cs" />
     <Compile Include="GUI\Category\fAddCategory.cs">
       <SubType>Form</SubType>
