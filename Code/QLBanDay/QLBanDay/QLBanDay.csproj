@@ -55,6 +55,7 @@
     <Compile Include="BLL\usersBLL.cs" />
     <Compile Include="DAL\dal.cs" />
     <Compile Include="DTO\UsersDTO.cs" />
+    <Compile Include="GUI\formCommon\Logout.cs" />
     <Compile Include="GUI\FormProduct\fAddCompany.cs">
       <SubType>Form</SubType>
     </Compile>

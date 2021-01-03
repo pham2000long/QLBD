@@ -12,7 +12,7 @@ namespace QLBanDay
     {
         private SqlConnection getConnection()
         {
-            string connString = @"Data Source=DESKTOP-VOM8DSD\SQLEXPRESS;Initial Catalog=QLBanDay;Integrated Security=True";
+            string connString = @"Data Source=DESKTOP-20SRPVH\SQLEXPRESS;Initial Catalog=QLBanDay;Integrated Security=True";
             SqlConnection conn = new SqlConnection(connString);
             return conn;
         }

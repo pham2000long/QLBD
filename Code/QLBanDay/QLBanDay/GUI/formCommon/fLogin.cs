@@ -29,43 +29,38 @@ namespace QLBanDay
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            //string error = "";
-            //if(txtAccount.Text == "")
-            //{
-            //    error = "User khong duoc de trong";
-            //}
-            //else if(txtPassword.Text == "")
-            //{
-            //    error = "Password khong duoc de trong";
-            //}
-            ////users.getUsernamPassword(txtAccount.Text, txtPassword.Text) != null
-            //if(error == "")
-            //{
-            //    string username = txtAccount.Text;
-            //    string password = txtPassword.Text;
-            //    if (!users.getUsernamPassword(username, password))
-            //    {
-            //        MessageBox.Show("Username or Password khong ton tai");
-            //    }
-            //    else
-            //    {
-            //        fManager f = new fManager();
-            //        this.Hide();
-            //        f.ShowDialog();
-            //        this.Show();
-            //    }
-            //}
-            
-            //else
-            //{
-            //    MessageBox.Show(error);
-            //}
+            string error = "";
+            if (txtAccount.Text == "")
+            {
+                error = "Tai khoan khong duoc de trong";
+            }
+            else if (txtPassword.Text == "")
+            {
+                error = "Mat khau khong duoc de trong";
+            }
+            //users.getUsernamPassword(txtAccount.Text, txtPassword.Text) != null
+            if (error == "")
+            {
+                string username = txtAccount.Text;
+                string password = txtPassword.Text;
+                if (!users.getUsernamPassword(username, password))
+                {
+                    MessageBox.Show("Tai khoan hoac mat khau khong ton tai");
+                }
+                else
+                {
+                    fManager f = new fManager();
+                    this.Hide();
+                    f.ShowDialog();
+                    resetAcc();
+                    this.Show();
+                }
+            }
 
-            fManager f = new fManager();
-            this.Hide();
-            f.ShowDialog();
-            this.Show();
-
+            else
+            {
+                MessageBox.Show(error, "Thong bao", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -73,14 +68,10 @@ namespace QLBanDay
             Application.Exit();
         }
 
-        private void btnLogin_Click_1(object sender, EventArgs e)
+        private void resetAcc ()
         {
-
-        }
-
-        private void fLogin_Load(object sender, EventArgs e)
-        {
-
+            txtAccount.Text = "";
+            txtPassword.Text = "";
         }
     }
 }

@@ -231,10 +231,14 @@ namespace QLBanDay
 
 
         #endregion
-
-        private void panelDesktop_Paint(object sender, PaintEventArgs e)
+        private void iconBars_Click(object sender, EventArgs e)
         {
+            showSubMenu(panelBars);
+        }
 
+        private void logout_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -50,7 +50,7 @@ namespace QLBanDay
             this.iconCurrentChildForm = new FontAwesome.Sharp.IconPictureBox();
             this.panelDesktop = new System.Windows.Forms.Panel();
             this.panelBars = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.logout = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelMenu.SuspendLayout();
@@ -332,6 +332,7 @@ namespace QLBanDay
             this.iconBars.Size = new System.Drawing.Size(32, 32);
             this.iconBars.TabIndex = 4;
             this.iconBars.TabStop = false;
+            this.iconBars.Click += new System.EventHandler(this.iconBars_Click);
             // 
             // iconMininum
             // 
@@ -413,33 +414,33 @@ namespace QLBanDay
             this.panelDesktop.Name = "panelDesktop";
             this.panelDesktop.Size = new System.Drawing.Size(1060, 1003);
             this.panelDesktop.TabIndex = 3;
-            this.panelDesktop.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDesktop_Paint);
             // 
             // panelBars
             // 
             this.panelBars.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelBars.Controls.Add(this.button2);
+            this.panelBars.Controls.Add(this.logout);
             this.panelBars.Controls.Add(this.button1);
             this.panelBars.Location = new System.Drawing.Point(877, 0);
             this.panelBars.Name = "panelBars";
             this.panelBars.Size = new System.Drawing.Size(110, 64);
             this.panelBars.TabIndex = 4;
             // 
-            // button2
+            // logout
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button2.Location = new System.Drawing.Point(0, 30);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(110, 30);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Log out";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.UseVisualStyleBackColor = false;
+            this.logout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
+            this.logout.Dock = System.Windows.Forms.DockStyle.Top;
+            this.logout.FlatAppearance.BorderSize = 0;
+            this.logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.logout.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logout.ForeColor = System.Drawing.Color.Gainsboro;
+            this.logout.Location = new System.Drawing.Point(0, 30);
+            this.logout.Name = "logout";
+            this.logout.Size = new System.Drawing.Size(110, 30);
+            this.logout.TabIndex = 1;
+            this.logout.Text = "Log out";
+            this.logout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.logout.UseVisualStyleBackColor = false;
+            this.logout.Click += new System.EventHandler(this.logout_Click);
             // 
             // button1
             // 
@@ -522,7 +523,7 @@ namespace QLBanDay
         private FontAwesome.Sharp.IconPictureBox iconBars;
         private FontAwesome.Sharp.IconButton IconUser;
         private System.Windows.Forms.Panel panelBars;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button logout;
         private System.Windows.Forms.Button button1;
     }
 }
