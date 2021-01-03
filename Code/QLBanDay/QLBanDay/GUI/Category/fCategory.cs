@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QLBanDay.GUI.Category;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +20,8 @@ namespace QLBanDay.GUI.FormProduct
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-
+            fAddCategory f = new fAddCategory();
+            f.ShowDialog();
         }
     }
 }
