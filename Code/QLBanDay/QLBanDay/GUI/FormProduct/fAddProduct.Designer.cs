@@ -54,9 +54,9 @@ namespace QLBanDay.GUI.FormProduct
             this.label14 = new System.Windows.Forms.Label();
             this.txtDesc = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.txtCount = new System.Windows.Forms.TextBox();
             this.txtProduct = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.txtCount = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconMininum)).BeginInit();
@@ -382,6 +382,15 @@ namespace QLBanDay.GUI.FormProduct
             this.label4.TabIndex = 5;
             this.label4.Text = "Mô tả ngắn";
             // 
+            // txtCount
+            // 
+            this.txtCount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCount.Location = new System.Drawing.Point(526, 313);
+            this.txtCount.Name = "txtCount";
+            this.txtCount.Size = new System.Drawing.Size(211, 30);
+            this.txtCount.TabIndex = 6;
+            // 
             // txtProduct
             // 
             this.txtProduct.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -403,15 +412,6 @@ namespace QLBanDay.GUI.FormProduct
             this.label13.TabIndex = 5;
             this.label13.Text = "Tên sản phẩm";
             // 
-            // txtCount
-            // 
-            this.txtCount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCount.Location = new System.Drawing.Point(526, 313);
-            this.txtCount.Name = "txtCount";
-            this.txtCount.Size = new System.Drawing.Size(211, 30);
-            this.txtCount.TabIndex = 6;
-            // 
             // fAddProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -420,6 +420,7 @@ namespace QLBanDay.GUI.FormProduct
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
             this.Name = "fAddProduct";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thêm sản phẩm";
             this.Load += new System.EventHandler(this.fAddProduct_Load);
             this.panel2.ResumeLayout(false);

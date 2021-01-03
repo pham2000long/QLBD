@@ -17,6 +17,22 @@ namespace QLBanDay
             SqlConnection conn = new SqlConnection(connString);
             return conn;
         }
+
+        public void setParam(SqlCommand cmd, params dynamic[] parameters)
+        {
+            try
+            {
+                for(int i = 0; i < parameters.Length; i++)
+                {
+                    dynamic para = parameters[i];
+                    string indexPara = "@" + i;
+                    cmd.Parameters.AddWithValue(indexPara, para);
+                }
+            } catch( Exception)
+            {
+
+            }
+        }
         
         public DataTable GetTable(String sql)
         {
@@ -46,6 +62,11 @@ namespace QLBanDay
                 cmd.ExecuteNonQuery();
             }
             catch (SqlException) { }
+            finally
+            {
+                if (con.State == ConnectionState.Open)
+                    con.Close();
+            }
         }
     }
 }

@@ -54,8 +54,13 @@
     <Compile Include="BLL\productsBLL.cs" />
     <Compile Include="BLL\usersBLL.cs" />
     <Compile Include="DAL\dal.cs" />
-    <Compile Include="DAL\UserDTO.cs" />
     <Compile Include="DTO\UsersDTO.cs" />
+    <Compile Include="GUI\Category\fAddCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Category\fAddCategory.Designer.cs">
+      <DependentUpon>fAddCategory.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\formCommon\Logout.cs" />
     <Compile Include="GUI\FormProduct\fAddCompany.cs">
       <SubType>Form</SubType>
@@ -101,6 +106,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\Category\fAddCategory.resx">
+      <DependentUpon>fAddCategory.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Category\fCategory.resx">
       <DependentUpon>fCategory.cs</DependentUpon>
     </EmbeddedResource>
