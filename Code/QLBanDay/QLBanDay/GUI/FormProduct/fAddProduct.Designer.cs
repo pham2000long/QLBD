@@ -54,9 +54,11 @@ namespace QLBanDay.GUI.FormProduct
             this.label14 = new System.Windows.Forms.Label();
             this.txtDesc = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtCount = new System.Windows.Forms.TextBox();
+            this.txtamount = new System.Windows.Forms.TextBox();
             this.txtProduct = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
+            this.txtprice = new System.Windows.Forms.TextBox();
+            this.cbgender = new System.Windows.Forms.ComboBox();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconMininum)).BeginInit();
@@ -87,6 +89,7 @@ namespace QLBanDay.GUI.FormProduct
             this.btnAddProduct.TabIndex = 0;
             this.btnAddProduct.Text = "Thêm";
             this.btnAddProduct.UseVisualStyleBackColor = false;
+            this.btnAddProduct.Click += new System.EventHandler(this.btnAddProduct_Click);
             // 
             // panel3
             // 
@@ -101,6 +104,7 @@ namespace QLBanDay.GUI.FormProduct
             this.panel3.Controls.Add(this.cbBrand);
             this.panel3.Controls.Add(this.cbColor);
             this.panel3.Controls.Add(this.label7);
+            this.panel3.Controls.Add(this.cbgender);
             this.panel3.Controls.Add(this.cbSize);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.txtMaProduct);
@@ -113,7 +117,8 @@ namespace QLBanDay.GUI.FormProduct
             this.panel3.Controls.Add(this.label14);
             this.panel3.Controls.Add(this.txtDesc);
             this.panel3.Controls.Add(this.label4);
-            this.panel3.Controls.Add(this.txtCount);
+            this.panel3.Controls.Add(this.txtamount);
+            this.panel3.Controls.Add(this.txtprice);
             this.panel3.Controls.Add(this.txtProduct);
             this.panel3.Controls.Add(this.label13);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
@@ -187,7 +192,7 @@ namespace QLBanDay.GUI.FormProduct
             this.cbCategori.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cbCategori.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCategori.FormattingEnabled = true;
-            this.cbCategori.Location = new System.Drawing.Point(279, 83);
+            this.cbCategori.Location = new System.Drawing.Point(279, 86);
             this.cbCategori.Name = "cbCategori";
             this.cbCategori.Size = new System.Drawing.Size(458, 33);
             this.cbCategori.TabIndex = 3;
@@ -382,14 +387,14 @@ namespace QLBanDay.GUI.FormProduct
             this.label4.TabIndex = 5;
             this.label4.Text = "Mô tả ngắn";
             // 
-            // txtCount
+            // txtamount
             // 
-            this.txtCount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCount.Location = new System.Drawing.Point(526, 313);
-            this.txtCount.Name = "txtCount";
-            this.txtCount.Size = new System.Drawing.Size(211, 30);
-            this.txtCount.TabIndex = 6;
+            this.txtamount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtamount.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtamount.Location = new System.Drawing.Point(526, 313);
+            this.txtamount.Name = "txtamount";
+            this.txtamount.Size = new System.Drawing.Size(211, 30);
+            this.txtamount.TabIndex = 6;
             // 
             // txtProduct
             // 
@@ -411,6 +416,25 @@ namespace QLBanDay.GUI.FormProduct
             this.label13.Size = new System.Drawing.Size(99, 17);
             this.label13.TabIndex = 5;
             this.label13.Text = "Tên sản phẩm";
+            // 
+            // txtprice
+            // 
+            this.txtprice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtprice.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtprice.Location = new System.Drawing.Point(131, 370);
+            this.txtprice.Name = "txtprice";
+            this.txtprice.Size = new System.Drawing.Size(458, 30);
+            this.txtprice.TabIndex = 6;
+            // 
+            // cbgender
+            // 
+            this.cbgender.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbgender.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbgender.FormattingEnabled = true;
+            this.cbgender.Location = new System.Drawing.Point(44, 268);
+            this.cbgender.Name = "cbgender";
+            this.cbgender.Size = new System.Drawing.Size(211, 33);
+            this.cbgender.TabIndex = 3;
             // 
             // fAddProduct
             // 
@@ -462,6 +486,8 @@ namespace QLBanDay.GUI.FormProduct
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtProduct;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox txtCount;
+        private System.Windows.Forms.TextBox txtamount;
+        private System.Windows.Forms.TextBox txtprice;
+        private System.Windows.Forms.ComboBox cbgender;
     }
 }

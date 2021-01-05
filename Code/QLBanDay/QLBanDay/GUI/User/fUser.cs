@@ -63,7 +63,7 @@ namespace QLBanDay.GUI.User
         private void btnDeleteUser_Click(object sender, EventArgs e)
         {
             //MessageBox.Show("Thong bao", "TB", MessageBoxButtons.YesNo);
-            if (MessageBox.Show("Bạn có chắc chắn muốn xóa người dùng này ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Bạn có muốn xóa người dùng này ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 user.deleteUser(fUser.index.ToString());
                 fUser_Load(sender, e);

@@ -24,7 +24,7 @@ namespace QLBanDay.GUI.FormProduct
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            fAddCategory f = new fAddCategory();
+            fAddCategory f = new fAddCategory(this);
             f.ShowDialog();
         }
         public void hienthi()
@@ -53,7 +53,11 @@ namespace QLBanDay.GUI.FormProduct
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-           
+            if (MessageBox.Show("Bạn có muốn xóa danh mục ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                categoryBLL.DeleteCategory(Int32.Parse(dgvCategory.Rows[d].Cells[0].Value.ToString()));
+                hienthi();
+            }
         }
     }
 }
