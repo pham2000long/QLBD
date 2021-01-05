@@ -12,45 +12,41 @@ using System.Windows.Forms;
 
 namespace QLBanDay.GUI.Category
 {
-    public partial class fAddCategory : Form
+    public partial class editcategory : Form
     {
+        int ma;
         fCategory fcategory;
         categoryBLL categoryBLL = new categoryBLL();
-        common commomMethodFn = new common();
-        public fAddCategory()
+        public editcategory()
         {
             InitializeComponent();
         }
-        public fAddCategory(fCategory f)
+        public editcategory(fCategory f)
         {
             InitializeComponent();
             fcategory = f;
         }
-        private void fAddCategory_Load(object sender, EventArgs e)
+        public void hienthi(string m,string ten,string mota)
         {
-            this.FormBorderStyle = FormBorderStyle.None;
+            ma = Int32.Parse(m);
+            txtName.Text = ten;
+            txtDescription.Text = mota;
         }
-
-        private void iconMininum_Click(object sender, EventArgs e)
+        private void editcategory_Load(object sender, EventArgs e)
         {
-            commomMethodFn.Mininum_Click(this);
-        }
-
-        private void ionMaxinum_Click(object sender, EventArgs e)
-        {
-            //commomMethodFn.Maxinum_Click(this);
         }
 
         private void iconExit_Click(object sender, EventArgs e)
         {
-            commomMethodFn.Exit_Click(this);
+            this.Close();
         }
 
-        private void btnAddProduct_Click(object sender, EventArgs e)
+        private void btnEditCategory_Click(object sender, EventArgs e)
         {
-            categoryBLL.InsertCategory(txtName.Text, txtDescription.Text);
+            categoryBLL.UpdateCategory(ma, txtName.Text, txtDescription.Text);
             fcategory.hienthi();
             this.Close();
+
         }
     }
 }

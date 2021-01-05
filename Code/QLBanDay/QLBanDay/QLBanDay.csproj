@@ -60,6 +60,12 @@
     <Compile Include="DTO\Orders_detailDTO.cs" />
     <Compile Include="DTO\ProductsDTO.cs" />
     <Compile Include="DTO\UsersDTO.cs" />
+    <Compile Include="GUI\Category\ed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Category\ed.Designer.cs">
+      <DependentUpon>ed.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Category\fAddCategory.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,6 +130,9 @@
     <Compile Include="GUI\User\userBLL.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\Category\ed.resx">
+      <DependentUpon>ed.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Category\fAddCategory.resx">
       <DependentUpon>fAddCategory.cs</DependentUpon>
     </EmbeddedResource>

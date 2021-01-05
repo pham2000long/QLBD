@@ -23,5 +23,10 @@ namespace QLBanDay.BLL
             string sql = "insert into categories ( name, description ) values('" + Name + "','" + Description + "')";
             dal.ExecuteNonQuery(sql);
         }
+        public void UpdateCategory(Int32 ma,string Name, string Description)
+        {
+            string sql = "update categories set name = '" + Name + "',description = '" + Description + "' where id='" + ma + "'";
+            dal.ExecuteNonQuery(sql);
+        }
     }
 }

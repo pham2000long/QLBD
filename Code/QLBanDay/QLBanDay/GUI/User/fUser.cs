@@ -39,14 +39,15 @@ namespace QLBanDay.GUI.User
                 user.UserName = row["username"].ToString();
                 user.Password = row["password"].ToString();
                 user.FullName = row["fullname"].ToString();
-                Boolean genderNumber = Boolean.Parse((row["gender"].ToString()).Trim());
-                user.Gender = genderNumber == true ? "Nam" : "Nữ";
+                //Boolean genderNumber = Boolean.Parse((row["gender"].ToString()));
+                //user.Gender = genderNumber == true ? "Nam" : "Nữ";
+                Console.WriteLine(row["gender"].ToString());
                 user.Phone = row["phone"].ToString();
                 user.Address = row["address"].ToString();
                 user.Email = row["email"].ToString();
                 user.Avatar = row["avatar"].ToString();
-                user.Roles = int.Parse(row["roles"].ToString()) == 1 ? "Admin" : "Nhân viên";
-                user.Created_at = DateTime.Parse(row["created_at"].ToString());
+                //user.Roles = int.Parse(row["roles"].ToString()) == 1 ? "Admin" : "Nhân viên";
+                //user.Created_at = DateTime.Parse(row["created_at"].ToString());
                 user.Updated_at = DateTime.Now;
                 listUser.Add(user);
             }
