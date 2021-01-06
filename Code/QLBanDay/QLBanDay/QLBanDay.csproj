@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="BLL\categoryBLL.cs" />
     <Compile Include="BLL\common.cs" />
+    <Compile Include="BLL\orderBLL.cs" />
     <Compile Include="BLL\productsBLL.cs" />
     <Compile Include="BLL\usersBLL.cs" />
     <Compile Include="DAL\dal.cs" />

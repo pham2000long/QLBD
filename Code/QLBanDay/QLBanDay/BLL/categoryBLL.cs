@@ -40,7 +40,7 @@ namespace QLBanDay.BLL
         }
         public void UpdateCategory(Int32 ma,string Name, string Description)
         {
-            string sql = "update categories set name = '" + Name + "',description = '" + Description + "' where id='" + ma + "'";
+            string sql = "update categories set name = '" + Name + "',description = '" + Description + "',updated_at='"+ DateTime.UtcNow.Date.ToString("yyyy-MM-dd") + "' where id='" + ma + "'";
             dal.ExecuteNonQuery(sql);
         }
         public void DeleteCategory(Int32 ma)
