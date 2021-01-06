@@ -1,13 +1,14 @@
 ﻿use master
 go
-create database QLBanDay
-use QLBanDay
+drop database QLBanGiay
+create database QLBanGiay
+use QLBanGiay
 go
 create table categories 
 (
+--Xóa avatar
 	id int identity primary key,
 	name nvarchar(255),
-	avatar nvarchar(255),
 	description ntext,
 	created_at date default getdate(),
 	updated_at date default null
@@ -15,6 +16,7 @@ create table categories
 go
 create table products
 (
+--Xóa material, sumary
 	id int identity primary key,
 	name nvarchar(255),
 	avatar nvarchar(255),
@@ -23,9 +25,7 @@ create table products
 	brand nvarchar(255),
 	color int,
 	gender bit,  -- 0 là Nam, 1 là Nữ
-	material nvarchar(255),
 	amount int,
-	summary nvarchar(255),
 	description ntext,
 	created_at date default getdate(), 
 	updated_at date default null,
@@ -35,6 +35,7 @@ go
 
 create table users
 (
+--Xóa avatar
 	id int identity primary key,
 	username nvarchar(255) not null,
 	password nvarchar(255) not null,
@@ -43,7 +44,6 @@ create table users
 	phone int,
 	address nvarchar(255),
 	email nvarchar(255),
-	avatar nvarchar(255),
 	roles int,
 	created_at date default getdate(),
 	updated_at date default null,
@@ -53,18 +53,18 @@ go
 
 create table orders
 (
+-- Xóa updated_at
+--xóa avatar
 	id int identity primary key,
 	fullname nvarchar(255),
 	gender bit,
 	phone int,
 	address nvarchar(255),
 	email nvarchar(255),
-	avatar nvarchar(255),
 	note nvarchar(255),
 	price_total int,
 	status int default 0,  -- 0 là chưa thanh toán, 1 là đã thanh toán
 	created_at date default getdate(),
-	updated_at date default null,
 	user_id int foreign key references users(id),
 );
 go
@@ -76,5 +76,6 @@ create table order_details
 	quantity int, -- Số sản phẩm đã đặt
 );
 go
+
 
 
