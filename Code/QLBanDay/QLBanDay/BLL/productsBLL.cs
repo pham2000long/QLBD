@@ -55,8 +55,8 @@ namespace QLBanDay.BLL
         {
             string sql = "insert into products (name,avatar,price,size,brand " +
                 ",color,gender,amount," +
-                "description,category_id) values('" + name + "','" + avatar + "','" + price + "','" + size + "'," +
-                "'" + brand + "','" + color + "','" + gender + "','" + amount + "','" + description + "','" + category_id + "')";
+                "description,category_id) values(N'" + name + "','" + avatar + "','" + price + "','" + size + "'," +
+                "N'" + brand + "','" + color + "',N'" + gender + "','" + amount + "',N'" + description + "','" + category_id + "')";
             dal.ExecuteNonQuery(sql);
         }
         public void Updateproduct(Int32 ma, string name, string avatar, Int32 price,
@@ -64,8 +64,8 @@ namespace QLBanDay.BLL
             Int32 amount, string description, int category_id)
         {
 
-            string sql = "update products set name='" + name + "',avatar='" + avatar + "',price='" + price + "',size='" + size + "',brand=" +
-                "'" + brand + "',color='" + color + "',gender='" + gender + "',amount='" + amount + "',description='" + description + "',category_id='" + category_id + "'" +
+            string sql = "update products set name=N'" + name + "',avatar='" + avatar + "',price='" + price + "',size='" + size + "',brand=N" +
+                "'" + brand + "',color='" + color + "',gender=N'" + gender + "',amount='" + amount + "',description=N'" + description + "',category_id='" + category_id + "'" +
                 "where id='"+ma+"'";
             dal.ExecuteNonQuery(sql);
         }
