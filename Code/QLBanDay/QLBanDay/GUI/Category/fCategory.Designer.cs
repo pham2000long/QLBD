@@ -41,7 +41,6 @@ namespace QLBanDay.GUI.FormProduct
             this.dgvCategory = new System.Windows.Forms.DataGridView();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.avatar = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.description = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.created_at = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.updated_at = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -165,7 +164,6 @@ namespace QLBanDay.GUI.FormProduct
             this.dgvCategory.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
             this.name,
-            this.avatar,
             this.description,
             this.created_at,
             this.updated_at});
@@ -202,13 +200,6 @@ namespace QLBanDay.GUI.FormProduct
             this.name.HeaderText = "Tên danh mục";
             this.name.Name = "name";
             this.name.ReadOnly = true;
-            // 
-            // avatar
-            // 
-            this.avatar.DataPropertyName = "avatar";
-            this.avatar.HeaderText = "Avatar";
-            this.avatar.Name = "avatar";
-            this.avatar.ReadOnly = true;
             // 
             // description
             // 
@@ -257,7 +248,6 @@ namespace QLBanDay.GUI.FormProduct
         private System.Windows.Forms.DataGridView dgvCategory;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn avatar;
         private System.Windows.Forms.DataGridViewTextBoxColumn description;
         private System.Windows.Forms.DataGridViewTextBoxColumn created_at;
         private System.Windows.Forms.DataGridViewTextBoxColumn updated_at;

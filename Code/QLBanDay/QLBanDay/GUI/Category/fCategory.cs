@@ -40,7 +40,7 @@ namespace QLBanDay.GUI.FormProduct
         private void btnEdit_Click(object sender, EventArgs e)
         {
             editcategory edit = new editcategory(this);
-            edit.hienthi(dgvCategory.Rows[d].Cells[0].Value.ToString(), dgvCategory.Rows[d].Cells[1].Value.ToString(), dgvCategory.Rows[d].Cells[3].Value.ToString());
+            edit.hienthi(dgvCategory.Rows[d].Cells[0].Value.ToString(), dgvCategory.Rows[d].Cells[1].Value.ToString(), dgvCategory.Rows[d].Cells[2].Value.ToString());
             edit.ShowDialog();
         }
 
