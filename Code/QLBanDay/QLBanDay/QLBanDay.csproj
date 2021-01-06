@@ -92,11 +92,11 @@
     <Compile Include="GUI\Category\fCategory.Designer.cs">
       <DependentUpon>fCategory.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\FormProduct\fcompany.cs">
+    <Compile Include="GUI\FormProduct\fEditProduct.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\FormProduct\fcompany.Designer.cs">
-      <DependentUpon>fcompany.cs</DependentUpon>
+    <Compile Include="GUI\FormProduct\fEditProduct.Designer.cs">
+      <DependentUpon>fEditProduct.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\FormProduct\fListProduct.cs">
       <SubType>Form</SubType>
@@ -146,8 +146,8 @@
     <EmbeddedResource Include="GUI\FormProduct\fAddProduct.resx">
       <DependentUpon>fAddProduct.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\FormProduct\fcompany.resx">
-      <DependentUpon>fcompany.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\FormProduct\fEditProduct.resx">
+      <DependentUpon>fEditProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormProduct\fListProduct.resx">
       <DependentUpon>fListProduct.cs</DependentUpon>

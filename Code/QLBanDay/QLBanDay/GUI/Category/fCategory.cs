@@ -39,16 +39,25 @@ namespace QLBanDay.GUI.FormProduct
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            editcategory edit = new editcategory(this);
-            edit.hienthi(dgvCategory.Rows[d].Cells[0].Value.ToString(), dgvCategory.Rows[d].Cells[1].Value.ToString(), dgvCategory.Rows[d].Cells[2].Value.ToString());
-            edit.ShowDialog();
+            try
+            {
+                editcategory edit = new editcategory(this);
+                edit.hienthi(dgvCategory.Rows[d].Cells[0].Value.ToString(), dgvCategory.Rows[d].Cells[1].Value.ToString(), dgvCategory.Rows[d].Cells[2].Value.ToString());
+                edit.ShowDialog();
+            }
+            catch(NullReferenceException x)
+            {
+                MessageBox.Show(x.Message);
+            }
         }
 
         private void dgvCategory_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             d = e.RowIndex;
-            btnEdit.Enabled = true;
-            btnDelete.Enabled = true;
+
+                btnEdit.Enabled = true;
+                btnDelete.Enabled = true;
+
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
