@@ -25,7 +25,8 @@ create table products
 	size int,
 	brand nvarchar(255),
 	color nvarchar(255),
-	gender nvarchar(3),  -- 0 là Nam, 1 là Nữ
+	-- sửa giới tính từ bit => nvarchar
+	gender nvarchar(5),  -- 0 là Nam, 1 là Nữ
 	amount int,
 	description ntext,
 	created_at date default getdate(), 
@@ -41,7 +42,8 @@ create table users
 	username nvarchar(255) not null,
 	password nvarchar(255) not null,
 	fullname nvarchar(255),
-	gender bit,
+	-- sửa giới tính từ bit => nvarchar
+	gender nvarchar(5),  -- 0 là Nam, 1 là Nữ
 	phone int,
 	address nvarchar(255),
 	email nvarchar(255),
@@ -58,7 +60,8 @@ create table orders
 --xóa avatar
 	id int identity primary key,
 	fullname nvarchar(255),
-	gender bit,
+	-- sửa giới tính từ bit => nvarchar
+	gender nvarchar(5),  -- 0 là Nam, 1 là Nữ
 	phone int,
 	address nvarchar(255),
 	email nvarchar(255),
