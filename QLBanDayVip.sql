@@ -17,14 +17,15 @@ go
 create table products
 (
 --Xóa material, sumary
+--sửa gender
 	id int identity primary key,
 	name nvarchar(255),
 	avatar nvarchar(255),
 	price int,
 	size int,
 	brand nvarchar(255),
-	color int,
-	gender bit,  -- 0 là Nam, 1 là Nữ
+	color nvarchar(255),
+	gender nvarchar(3),  -- 0 là Nam, 1 là Nữ
 	amount int,
 	description ntext,
 	created_at date default getdate(), 
@@ -77,5 +78,5 @@ create table order_details
 );
 go
 
-
-
+select * from products;
+delete from products
