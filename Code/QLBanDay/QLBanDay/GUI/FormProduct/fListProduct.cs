@@ -1,4 +1,6 @@
-﻿using QLBanDay.GUI.FormProduct;
+﻿using QLBanDay.BLL;
+using QLBanDay.DTO;
+using QLBanDay.GUI.FormProduct;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,26 +15,61 @@ namespace QLBanDay
 {
     public partial class fListProduct : Form
     {
-        common commomMethodFn = new common();
+        productsBLL productbll = new productsBLL();
+        int d;
         public fListProduct()
         {
             InitializeComponent();
         }
-
+        public void hienthi()
+        {
+            List<ProductsDTO> dt = productbll.ShowProduct();
+            dgvProduct.DataSource = dt;
+        }
         private void fListProduct_Load(object sender, EventArgs e)
         {
-            commomMethodFn.changeColordgv(dgvProduct);
+            hienthi();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            fAddProduct f = new fAddProduct();
+            fAddProduct f = new fAddProduct(this);
             f.ShowDialog();
         }
 
-        private void dgvProduct_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvProduct_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
+            for (int i = 0; i < dgvProduct.Rows.Count; i++)
+            {
+                string[] color = dgvProduct.Rows[i].Cells[6].Value.ToString().Trim('"').Split(',').ToArray();
+                dgvProduct.Rows[i].Cells[6].Style.BackColor = Color.FromArgb(int.Parse(color[0]), int.Parse(color[1]), int.Parse(color[2]), int.Parse(color[3]));
+                dgvProduct.Rows[i].Cells[6].Style.ForeColor = Color.FromArgb(int.Parse(color[0]), int.Parse(color[1]), int.Parse(color[2]), int.Parse(color[3]));
+            }
+        }
 
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            fEditProduct f = new fEditProduct(this, d,dgvProduct.Rows[d]);
+            f.ShowDialog();
+        }
+
+        private void dgvProduct_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            d = e.RowIndex;
+            if (dgvProduct.Rows[d] != null)
+            {
+                btnEdit.Enabled = true;
+                btnDelete.Enabled = true;
+            }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn có muốn xóa sản phẩm ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                productbll.Deleteproduct(Int32.Parse(dgvProduct.Rows[d].Cells[0].Value.ToString()));
+                hienthi();
+            }
         }
     }
 }
