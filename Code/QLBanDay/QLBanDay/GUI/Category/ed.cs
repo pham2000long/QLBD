@@ -14,6 +14,7 @@ namespace QLBanDay.GUI.Category
 {
     public partial class editcategory : Form
     {
+        common com = new common();
         int ma;
         fCategory fcategory;
         categoryBLL categoryBLL = new categoryBLL();
@@ -43,15 +44,28 @@ namespace QLBanDay.GUI.Category
 
         private void btnEditCategory_Click(object sender, EventArgs e)
         {
-            categoryBLL.UpdateCategory(ma, txtName.Text, txtDescription.Text);
-            fcategory.hienthi();
-            this.Close();
+
+            if (categoryBLL.getitem(txtName.Text) == 0)
+            {
+                categoryBLL.UpdateCategory(ma, txtName.Text, txtDescription.Text);
+                fcategory.hienthi();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Trùng tên danh mục", "Thông báo");
+            }
 
         }
 
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void editcategory_MouseDown(object sender, MouseEventArgs e)
+        {
+            com.MouseDown(this);
         }
     }
 }

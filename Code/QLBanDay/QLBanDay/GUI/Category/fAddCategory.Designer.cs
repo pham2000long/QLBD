@@ -32,11 +32,9 @@ namespace QLBanDay.GUI.Category
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnAddProduct = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.linkPicture = new System.Windows.Forms.LinkLabel();
             this.iconMininum = new FontAwesome.Sharp.IconPictureBox();
             this.iconExit = new FontAwesome.Sharp.IconPictureBox();
             this.ionMaxinum = new FontAwesome.Sharp.IconPictureBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -54,9 +52,9 @@ namespace QLBanDay.GUI.Category
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(40)))));
             this.panel2.Controls.Add(this.btnAddProduct);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 400);
+            this.panel2.Location = new System.Drawing.Point(0, 309);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(608, 90);
+            this.panel2.Size = new System.Drawing.Size(608, 119);
             this.panel2.TabIndex = 39;
             // 
             // btnAddProduct
@@ -78,11 +76,9 @@ namespace QLBanDay.GUI.Category
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(40)))));
-            this.panel3.Controls.Add(this.linkPicture);
             this.panel3.Controls.Add(this.iconMininum);
             this.panel3.Controls.Add(this.iconExit);
             this.panel3.Controls.Add(this.ionMaxinum);
-            this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.label18);
             this.panel3.Controls.Add(this.label12);
@@ -91,21 +87,9 @@ namespace QLBanDay.GUI.Category
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(608, 400);
+            this.panel3.Size = new System.Drawing.Size(608, 309);
             this.panel3.TabIndex = 38;
-            // 
-            // linkPicture
-            // 
-            this.linkPicture.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.linkPicture.AutoSize = true;
-            this.linkPicture.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkPicture.LinkColor = System.Drawing.Color.White;
-            this.linkPicture.Location = new System.Drawing.Point(139, 285);
-            this.linkPicture.Name = "linkPicture";
-            this.linkPicture.Size = new System.Drawing.Size(52, 17);
-            this.linkPicture.TabIndex = 34;
-            this.linkPicture.TabStop = true;
-            this.linkPicture.Text = "Picture";
+            this.panel3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseDown);
             // 
             // iconMininum
             // 
@@ -154,18 +138,6 @@ namespace QLBanDay.GUI.Category
             this.ionMaxinum.TabIndex = 33;
             this.ionMaxinum.TabStop = false;
             this.ionMaxinum.Click += new System.EventHandler(this.ionMaxinum_Click);
-            // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label2.Location = new System.Drawing.Point(73, 285);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 17);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Avatar";
             // 
             // label1
             // 
@@ -224,7 +196,7 @@ namespace QLBanDay.GUI.Category
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(608, 490);
+            this.ClientSize = new System.Drawing.Size(608, 428);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -252,8 +224,6 @@ namespace QLBanDay.GUI.Category
         private FontAwesome.Sharp.IconPictureBox ionMaxinum;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.LinkLabel linkPicture;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtDescription;
         private System.Windows.Forms.TextBox txtName;

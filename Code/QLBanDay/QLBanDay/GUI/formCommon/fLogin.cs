@@ -13,15 +13,22 @@ namespace QLBanDay
 {
     public partial class fLogin : Form
     {
+        common com = new common();
         usersBLL users = new usersBLL();
+        int id;
         public fLogin()
         {
             InitializeComponent();
         }
 
+        public int setIDUser()
+        {
+            return id;
+        }
+
         private void fLogin_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if(MessageBox.Show("Bạn có chắc chắn thoát chương trình không ?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) != System.Windows.Forms.DialogResult.OK)
+            if (MessageBox.Show("Bạn có chắc chắn thoát chương trình không ?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) != System.Windows.Forms.DialogResult.OK)
             {
                 e.Cancel = true;
             }
@@ -32,11 +39,11 @@ namespace QLBanDay
             string error = "";
             if (txtAccount.Text == "")
             {
-                error = "Tai khoan khong duoc de trong";
+                error = "Tài khoản không được để trống";
             }
             else if (txtPassword.Text == "")
             {
-                error = "Mat khau khong duoc de trong";
+                error = "Mật khẩu không được để trống";
             }
             //users.getUsernamPassword(txtAccount.Text, txtPassword.Text) != null
             if (error == "")
@@ -45,29 +52,22 @@ namespace QLBanDay
                 string password = txtPassword.Text;
                 if (!users.getUsernamPassword(username, password))
                 {
-                    MessageBox.Show("Tai khoan hoac mat khau khong ton tai");
+                    MessageBox.Show("Tài khoản hoặc mật khẩu không tồn tại");
                 }
                 else
                 {
-                    fManager f = new fManager();
+                    fManager f = new fManager(users.idUser());
                     this.Hide();
                     f.ShowDialog();
                     resetAcc();
-
                     this.Show();
                 }
-            }
 
+            }
             else
             {
-                MessageBox.Show(error, "Thong bao", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(error, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-
-            //fManager f = new fManager();
-            //this.Hide();
-            //f.ShowDialog();
-            //resetAcc();
-            //this.Show();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -75,10 +75,25 @@ namespace QLBanDay
             Application.Exit();
         }
 
-        private void resetAcc ()
+        private void resetAcc()
         {
             txtAccount.Text = "";
             txtPassword.Text = "";
+        }
+
+        private void fLogin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            com.MouseDown(this);
         }
     }
 }

@@ -43,23 +43,36 @@ namespace QLBanDay
             {
                 string[] color = dgvProduct.Rows[i].Cells[6].Value.ToString().Trim('"').Split(',').ToArray();
                 dgvProduct.Rows[i].Cells[6].Style.BackColor = Color.FromArgb(int.Parse(color[0]), int.Parse(color[1]), int.Parse(color[2]), int.Parse(color[3]));
-                dgvProduct.Rows[i].Cells[6].Style.ForeColor = Color.FromArgb(int.Parse(color[0]), int.Parse(color[1]), int.Parse(color[2]), int.Parse(color[3]));
+                dgvProduct.Rows[i].Cells[6].Style.ForeColor = Color.Transparent;
             }
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            fEditProduct f = new fEditProduct(this, d,dgvProduct.Rows[d]);
-            f.ShowDialog();
+            try
+            {
+                fEditProduct f = new fEditProduct(this, d, dgvProduct.Rows[d]);
+                f.ShowDialog();
+            }
+            catch(Exception)
+            {
+                MessageBox.Show("phải chọn 1 dòng dữ liệu", "thông báo");
+            }
         }
 
         private void dgvProduct_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             d = e.RowIndex;
-            if (dgvProduct.Rows[d] != null)
+            try
             {
-                btnEdit.Enabled = true;
-                btnDelete.Enabled = true;
+                if (dgvProduct.Rows[d] != null)
+                {
+                    btnEdit.Enabled = true;
+                    btnDelete.Enabled = true;
+                }
+            } catch(Exception x)
+            {
+                MessageBox.Show("Phải chọn một dòng dữ liệu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 

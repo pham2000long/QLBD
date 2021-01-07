@@ -55,5 +55,13 @@ namespace QLBanDay.BLL
             dt = dal.GetTable(sql);
             return int.Parse(dt.Rows[0].ItemArray[0].ToString());
         }
+        public int getitem(string name)
+        {
+            string sql = "select *from categories where name='" + name + "'";
+            DataTable dt = new DataTable();
+            dt= dal.GetTable(sql);
+            return dt.Rows.Count;
+        }
+
     }
 }

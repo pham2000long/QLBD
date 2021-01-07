@@ -14,75 +14,70 @@ namespace QLBanDay.GUI.User
 {
     public partial class fUser : Form
     {
-        common commomMethodFn = new common();
-        usersBLL user = new usersBLL();
-        static int index;
+        
+        usersBLL userbll = new usersBLL();
+        int idUser;
+        int d;
+        DataGridViewRow row;
         public fUser()
         {
             InitializeComponent();
         }
-        public void hienthi()
+
+        public fUser(int idUser)
         {
-            List<UsersDTO> dt = userBLL.ListUsers();
-            dgvUser.DataSource = dt;
+            InitializeComponent();
+            this.idUser = idUser;
         }
+
         private void btnAddUser_Click(object sender, EventArgs e)
         {
-            fAddUser f = new fAddUser();
+            fAddUser f = new fAddUser(this);
             f.ShowDialog();
+        }
+
+        public void hienthi()
+        {
+            List<UsersDTO> dt = userbll.showUser();
+            dgvUser.DataSource = dt;
+            fLogin f = new fLogin();
+            Console.WriteLine(f.setIDUser());
         }
 
         private void fUser_Load(object sender, EventArgs e)
         {
-            DataTable dt = user.showUser();
-            List<UsersDTO> listUser = new List<UsersDTO>();
-            foreach(DataRow row in dt.Rows)
-            {
-                UsersDTO user = new UsersDTO();
-                user.ID = int.Parse(row["id"].ToString());
-                user.UserName = row["username"].ToString();
-                user.Password = row["password"].ToString();
-                user.FullName = row["fullname"].ToString();
-                //Boolean genderNumber = Boolean.Parse((row["gender"].ToString()));
-                //user.Gender = genderNumber == true ? "Nam" : "Nữ";
-                Console.WriteLine(row["gender"].ToString());
-                user.Phone = row["phone"].ToString();
-                user.Address = row["address"].ToString();
-                user.Email = row["email"].ToString();
-                //user.Avatar = row["avatar"].ToString();
-                //user.Roles = int.Parse(row["roles"].ToString()) == 1 ? "Admin" : "Nhân viên";
-                //user.Created_at = DateTime.Parse(row["created_at"].ToString());
-                user.Updated_at = DateTime.Now;
-                listUser.Add(user);
-            }
-            dgvUser.DataSource = listUser;
-            commomMethodFn.changeColordgv(dgvUser);
-            if(dgvUser.Rows.Count > 0)
-            {
-                btnDeleteUser.Enabled = true;
-            }
+            hienthi();
         }
 
         private void btnDeleteUser_Click(object sender, EventArgs e)
         {
             //MessageBox.Show("Thong bao", "TB", MessageBoxButtons.YesNo);
-            if (MessageBox.Show("Bạn có muốn xóa người dùng này ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                user.deleteUser(fUser.index.ToString());
-                fUser_Load(sender, e);
-            }
+            //if (MessageBox.Show("Bạn có muốn xóa người dùng này ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            //{
+            //    userbll.deleteUser(fUser.index.ToString());
+            //    fUser_Load(sender, e);
+            //}
         }
 
         private void dgvUser_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            //Console.WriteLine();
-            fUser.index = int.Parse(dgvUser.Rows[e.RowIndex].Cells[0].Value.ToString());
+            //fUser.index = int.Parse(dgvUser.Rows[e.RowIndex].Cells[0].Value.ToString());
+            d = e.RowIndex;
+            if (dgvUser.Rows[d] != null)
+            {
+                btnDeleteUser.Enabled = true;
+                btnEditUser.Enabled = true;
+            }
+        }
+
+        private void btnEditUser_Click(object sender, EventArgs e)
+        {
+            fEditUser f = new fEditUser(this, dgvUser.Rows[d]);
+            f.ShowDialog();
         }
 
         private void dgvUser_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
-
 
         }
     }

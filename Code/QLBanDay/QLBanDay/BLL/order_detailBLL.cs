@@ -18,7 +18,12 @@ namespace QLBanDay.BLL
         }
         public void insert_order_detail(int order_id,int product_id,int quantity)
         {
-            string sql = "insert into orders (order_id, product_id, quantity) values('" + order_id + "','" + product_id + "','" + quantity + "')";
+            string sql = "insert into order_details (order_id, product_id, quantity) values('" + order_id + "','" + product_id + "','" + quantity + "')";
+            dal.ExecuteNonQuery(sql);
+        }
+        public void delete_orderdetail(int order_id)
+        {
+            string sql = "delete from order_details where order_id='" + order_id + "'";
             dal.ExecuteNonQuery(sql);
         }
     }

@@ -23,28 +23,28 @@ namespace QLBanDay.BLL
         {
             string sql = "insert into orders (fullname,gender,phone,address,email " +
                 ",note,price_total,status,user_id)" +
-                " values('" + fullname + "','" + gender + "','" + phone + "','" + address + "'," +
-                "'" + email + "','" + note + "','"+ price_total + "','" + status + "','" + user_id + "')";
+                " values(N'" + fullname + "',N'" + gender + "','" + phone + "',N'" + address + "'," +
+                "N'" + email + "',N'" + note + "','"+ price_total + "','" + status + "','" + user_id + "')";
             dal.ExecuteNonQuery(sql);
         }
         public void tongtien(int id,int tongtien)
         {
             string sql= "update oreders set tongtien='"+ tongtien + "' where id='"+id+"'";
         }
-        public void Updateorder(int ma,string fullname, string gender, Int32 phone,
-            string address, string email, string note, Int32 price_total, //X price_total update csdl
-            Int32 status, int user_id)//X avatar??? update csdl
-        {
+        //public void Updateorder(int ma,string fullname, string gender, Int32 phone,
+        //    string address, string email, string note, Int32 price_total, //X price_total update csdl
+        //    Int32 status, int user_id)//X avatar??? update csdl
+        //{
 
-            string sql = "update orders set fullname '" + fullname + "',gender='" + gender + "',phone='" + phone + "'," +
-            "address='" + address + "',email='" + email + "',note='" + note + "'," +
-            "price_total='" + price_total + "',status='" + status + "',user_id='" + user_id + "'" +
-                "where id='" + ma + "'";
-            dal.ExecuteNonQuery(sql);
-        }
-        public void Deleteorder(Int32 ma)
+        //    string sql = "update orders set fullname =N'" + fullname + "',gender=N'" + gender + "',phone='" + phone + "'," +
+        //    "address='" + address + "',email='" + email + "',note='" + note + "'," +
+        //    "price_total='" + price_total + "',status='" + status + "',user_id='" + user_id + "'" +
+        //        "where id='" + ma + "'";
+        //    dal.ExecuteNonQuery(sql);
+        //}
+        public void Deleteorder(Int32 id)
         {
-            string sql = "delete orders where id= '" + ma + "'";
+            string sql = "delete orders where id= '" + id + "'";
             dal.ExecuteNonQuery(sql);
         }
         public int getid()
