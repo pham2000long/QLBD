@@ -15,12 +15,16 @@ namespace QLBanDay.GUI.User
     {
         common commomMethodFn = new common();
         usersBLL bll = new usersBLL();
-        fUser f = new fUser();
+        fUser ListUsers = new fUser();
         public fAddUser()
         {
             InitializeComponent();
         }
-
+        public fAddUser(fUser f)
+        {
+            InitializeComponent();
+            ListUsers = f;
+        }
         private void iconMininum_Click(object sender, EventArgs e)
         {
             commomMethodFn.Mininum_Click(this);
@@ -42,7 +46,6 @@ namespace QLBanDay.GUI.User
             {
                 string fullName = txtFullname.Text;
                 string gender = cbGender.SelectedItem.ToString();
-                int gend = (gender.Equals("Nam")) ? 1 : 0;
                 string account = txtAccount.Text;
                 string password = txtPassword.Text;
                 string email = txtEmail.Text;
@@ -54,7 +57,9 @@ namespace QLBanDay.GUI.User
                     role = 1;
                 else if (roleName.Equals("Nhân viên"))
                     role = 2;
-                bll.insertUser(account, password, fullName, gend, phone, address, email, "aaa", role);
+                bll.insertUser(account, password, fullName, gender, phone, address, email, role);
+                ListUsers.hienthi();
+                this.Close();
 
             } catch(Exception)
             {

@@ -12,33 +12,43 @@ namespace QLBanDay.BLL
     {
         dal dal = new dal();
 
-        //private List<UsersDTO> ListUsers(DataTable dt)
-        //{
-        //    List<UsersDTO> listUsers = new List<UsersDTO>();
-        //    for (int i = 0; i < dt.Rows.Count; i++)
-        //    {
-        //        UsersDTO user = new UsersDTO();
-        //        user.UserName = "";
-        //        user.Password = "";
-        //        user.FullName = "";
-        //        //user.Gender = "";
-        //        user.Address = "";
-        //        user.Phone = "";
-        //        user.Email = "";
-        //        user.Avatar = "";
-        //        user.Roles = 0;
-        //        user.ID = int.Parse(dt.Rows[0].ItemArray[0].ToString());
-        //        user.UserName = dt.Rows[0].ItemArray[1].ToString();
-        //        user.Password = dt.Rows[0].ItemArray[2].ToString();
-        //        user.FullName = dt.Rows[0].ItemArray[3].ToString();
-        //        //user.Gender = dt.Rows[0].ItemArray[4].ToString();
-        //        user.Address = dt.Rows[0].ItemArray[5].ToString();
-        //        user.Phone = dt.Rows[0].ItemArray[6].ToString();
-        //        listUsers.Add(user);
-        //    }
-        //    return listUsers;
-        //}
-       
+        public List<UsersDTO> ListUsers()
+        {
+            string sql = "select * from users";
+            DataTable data = new DataTable();
+            data = dal.GetTable(sql);
+            List<UsersDTO> listusers = new List<UsersDTO>();
+            foreach (DataRow row in data.Rows)
+            {
+                UsersDTO user = new UsersDTO();
+                user.ID = int.Parse(row["id"].ToString());
+                //category.ID = int.Parse(dt.Rows[i].ItemArray[0].ToString());
+                user.UserName = row["username"].ToString();
+                user.FullName = row["fullname"].ToString();
+                user.Gender = row["gender"].ToString();
+                user.Phone = row["phone"].ToString();
+                user.Address = row["address"].ToString();
+                user.Email = row["email"].ToString();
+                if (int.Parse(row["roles"].ToString()) == 1)
+                    user.Roles = "Admin";
+                else
+
+
+
+
+
+
+
+
+
+
+                    user.Roles = "Nhân viên";
+
+                listusers.Add(user);
+            }
+            return listusers;
+        }
+
         public bool getUsernamPassword(string usename, string password)
         {
             string sql = "select * from users where username='" + usename + "' AND password='" + password + "'";
@@ -56,12 +66,12 @@ namespace QLBanDay.BLL
             return dt;
         }
 
-        public void insertUser(string user, string pass, string fullName, int gender, string phone, string address, string email, string avartar, int roles)
+        public void insertUser(string user, string pass, string fullName, string gender, string phone, string address, string email, int roles)
         {
             try
             {
                 
-                string sql = "insert into users (username, password, fullname, gender, phone, address, email, avatar, roles) values ('" + user + "', '" + pass + "', N'" + fullName + "','" + gender + "','" + int.Parse(phone) + "', N'" + address + "', '" + email + "','" + avartar + "','" + roles + "')";
+                string sql = "insert into users (username, password, fullname, gender, phone, address, email, roles) values ('" + user + "', '" + pass + "', N'" + fullName + "','" + gender + "','" + int.Parse(phone) + "', N'" + address + "', '" + email + "','" + roles + "')";
                 dal.ExecuteNonQuery(sql);
             }
             catch (Exception)

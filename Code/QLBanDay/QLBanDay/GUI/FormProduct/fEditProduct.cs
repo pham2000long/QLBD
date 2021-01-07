@@ -37,7 +37,7 @@ namespace QLBanDay.GUI.FormProduct
             try {
                 pbavatar.Image = Image.FromFile(row.Cells[2].Value.ToString());
             }
-            catch(FileNotFoundException x)
+            catch(FileNotFoundException)
             {
                 MessageBox.Show("sai đường dẫn ảnh");
             }

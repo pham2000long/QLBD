@@ -29,44 +29,45 @@ namespace QLBanDay
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            //string error = "";
-            //if (txtAccount.Text == "")
-            //{
-            //    error = "Tai khoan khong duoc de trong";
-            //}
-            //else if (txtPassword.Text == "")
-            //{
-            //    error = "Mat khau khong duoc de trong";
-            //}
-            ////users.getUsernamPassword(txtAccount.Text, txtPassword.Text) != null
-            //if (error == "")
-            //{
-            //    string username = txtAccount.Text;
-            //    string password = txtPassword.Text;
-            //    if (!users.getUsernamPassword(username, password))
-            //    {
-            //        MessageBox.Show("Tai khoan hoac mat khau khong ton tai");
-            //    }
-            //    else
-            //    {
-            //        fManager f = new fManager();
-            //        this.Hide();
-            //        f.ShowDialog();
-            //        resetAcc();
-            //        this.Show();
-            //    }
-            //}
+            string error = "";
+            if (txtAccount.Text == "")
+            {
+                error = "Tai khoan khong duoc de trong";
+            }
+            else if (txtPassword.Text == "")
+            {
+                error = "Mat khau khong duoc de trong";
+            }
+            //users.getUsernamPassword(txtAccount.Text, txtPassword.Text) != null
+            if (error == "")
+            {
+                string username = txtAccount.Text;
+                string password = txtPassword.Text;
+                if (!users.getUsernamPassword(username, password))
+                {
+                    MessageBox.Show("Tai khoan hoac mat khau khong ton tai");
+                }
+                else
+                {
+                    fManager f = new fManager();
+                    this.Hide();
+                    f.ShowDialog();
+                    resetAcc();
 
-            //else
-            //{
-            //    MessageBox.Show(error, "Thong bao", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //}
+                    this.Show();
+                }
+            }
 
-            fManager f = new fManager();
-            this.Hide();
-            f.ShowDialog();
-            resetAcc();
-            this.Show();
+            else
+            {
+                MessageBox.Show(error, "Thong bao", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            //fManager f = new fManager();
+            //this.Hide();
+            //f.ShowDialog();
+            //resetAcc();
+            //this.Show();
         }
 
         private void btnExit_Click(object sender, EventArgs e)

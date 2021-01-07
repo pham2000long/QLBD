@@ -32,7 +32,6 @@ namespace QLBanDay.GUI.User
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.btnSearch = new FontAwesome.Sharp.IconButton();
-            this.btnEditUser = new FontAwesome.Sharp.IconButton();
             this.btnDeleteUser = new FontAwesome.Sharp.IconButton();
             this.btnAddUser = new FontAwesome.Sharp.IconButton();
             this.dgvUser = new System.Windows.Forms.DataGridView();
@@ -45,7 +44,6 @@ namespace QLBanDay.GUI.User
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.panel1.Controls.Add(this.txtSearch);
             this.panel1.Controls.Add(this.btnSearch);
-            this.panel1.Controls.Add(this.btnEditUser);
             this.panel1.Controls.Add(this.btnDeleteUser);
             this.panel1.Controls.Add(this.btnAddUser);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -85,25 +83,6 @@ namespace QLBanDay.GUI.User
             this.btnSearch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSearch.UseVisualStyleBackColor = true;
             // 
-            // btnEditUser
-            // 
-            this.btnEditUser.Enabled = false;
-            this.btnEditUser.FlatAppearance.BorderSize = 0;
-            this.btnEditUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditUser.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnEditUser.IconChar = FontAwesome.Sharp.IconChar.Edit;
-            this.btnEditUser.IconColor = System.Drawing.Color.DimGray;
-            this.btnEditUser.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.btnEditUser.IconSize = 25;
-            this.btnEditUser.Location = new System.Drawing.Point(118, 12);
-            this.btnEditUser.Name = "btnEditUser";
-            this.btnEditUser.Size = new System.Drawing.Size(76, 35);
-            this.btnEditUser.TabIndex = 0;
-            this.btnEditUser.Text = "Sửa";
-            this.btnEditUser.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnEditUser.UseVisualStyleBackColor = true;
-            // 
             // btnDeleteUser
             // 
             this.btnDeleteUser.Enabled = false;
@@ -115,7 +94,7 @@ namespace QLBanDay.GUI.User
             this.btnDeleteUser.IconColor = System.Drawing.Color.DimGray;
             this.btnDeleteUser.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btnDeleteUser.IconSize = 25;
-            this.btnDeleteUser.Location = new System.Drawing.Point(200, 15);
+            this.btnDeleteUser.Location = new System.Drawing.Point(118, 12);
             this.btnDeleteUser.Name = "btnDeleteUser";
             this.btnDeleteUser.Size = new System.Drawing.Size(76, 35);
             this.btnDeleteUser.TabIndex = 0;
@@ -153,6 +132,7 @@ namespace QLBanDay.GUI.User
             this.dgvUser.Size = new System.Drawing.Size(1181, 669);
             this.dgvUser.TabIndex = 5;
             this.dgvUser.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUser_CellClick);
+            this.dgvUser.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUser_CellContentClick);
             // 
             // fUser
             // 
@@ -175,7 +155,6 @@ namespace QLBanDay.GUI.User
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox txtSearch;
         private FontAwesome.Sharp.IconButton btnSearch;
-        private FontAwesome.Sharp.IconButton btnEditUser;
         private FontAwesome.Sharp.IconButton btnDeleteUser;
         private FontAwesome.Sharp.IconButton btnAddUser;
         private System.Windows.Forms.DataGridView dgvUser;

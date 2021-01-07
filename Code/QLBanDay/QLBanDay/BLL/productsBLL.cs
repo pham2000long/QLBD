@@ -74,5 +74,12 @@ namespace QLBanDay.BLL
             string sql = "delete products where id= '" + ma + "'";
             dal.ExecuteNonQuery(sql);
         }
+        public int getID(string ten)
+        {
+            string sql = "select ID from products where name='" + ten + "'";
+            DataTable dt = new DataTable();
+            dt = dal.GetTable(sql);
+            return int.Parse(dt.Rows[0].ItemArray[0].ToString());
+        }
     }
 }

@@ -53,12 +53,13 @@
     <Compile Include="BLL\categoryBLL.cs" />
     <Compile Include="BLL\common.cs" />
     <Compile Include="BLL\orderBLL.cs" />
+    <Compile Include="BLL\order_detailBLL.cs" />
     <Compile Include="BLL\productsBLL.cs" />
     <Compile Include="BLL\usersBLL.cs" />
     <Compile Include="DAL\dal.cs" />
     <Compile Include="DTO\CategoriesDTO.cs" />
     <Compile Include="DTO\OrdersDTO.cs" />
-    <Compile Include="DTO\Orders_detailDTO.cs" />
+    <Compile Include="DTO\Order_detailDTO.cs" />
     <Compile Include="DTO\ProductsDTO.cs" />
     <Compile Include="DTO\UsersDTO.cs" />
     <Compile Include="GUI\Category\ed.cs">
@@ -74,11 +75,29 @@
       <DependentUpon>fAddCategory.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\formCommon\Logout.cs" />
-    <Compile Include="GUI\FormProduct\fAddCompany.cs">
+    <Compile Include="GUI\FormOrder\fAddOrder.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\FormProduct\fAddCompany.Designer.cs">
-      <DependentUpon>fAddCompany.cs</DependentUpon>
+    <Compile Include="GUI\FormOrder\fAddOrder.Designer.cs">
+      <DependentUpon>fAddOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormOrder\fAddProductorder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormOrder\fAddProductorder.Designer.cs">
+      <DependentUpon>fAddProductorder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormOrder\fEditSttOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormOrder\fEditSttOrder.Designer.cs">
+      <DependentUpon>fEditSttOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormOrder\fListOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormOrder\fListOrder.Designer.cs">
+      <DependentUpon>fListOrder.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\FormProduct\fAddProduct.cs">
       <SubType>Form</SubType>
@@ -140,8 +159,14 @@
     <EmbeddedResource Include="GUI\Category\fCategory.resx">
       <DependentUpon>fCategory.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\FormProduct\fAddCompany.resx">
-      <DependentUpon>fAddCompany.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\FormOrder\fAddOrder.resx">
+      <DependentUpon>fAddOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormOrder\fAddProductorder.resx">
+      <DependentUpon>fAddProductorder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormOrder\fListOrder.resx">
+      <DependentUpon>fListOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormProduct\fAddProduct.resx">
       <DependentUpon>fAddProduct.cs</DependentUpon>

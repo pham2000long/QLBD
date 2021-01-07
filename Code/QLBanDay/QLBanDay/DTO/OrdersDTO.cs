@@ -15,12 +15,10 @@ namespace QLBanDay.DTO
         public string Phone { get; set; }
         public string Address { get; set; }
         public string Email { get; set; }
-        public string Avatar { get; set; }
         public string Note { get; set; }
         public int Price_total { get; set; }
         public int Status { get; set; }
         public DateTime Created_at { get; set; }
-        public DateTime Updated_at { get; set; }
         public int User_id { get; set; }
     }
 }

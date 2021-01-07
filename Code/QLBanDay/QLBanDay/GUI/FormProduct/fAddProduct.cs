@@ -30,8 +30,6 @@ namespace QLBanDay.GUI.FormProduct
         {
             InitializeComponent();
             listProduct = f;
-
-
         }
         private void panel3_MouseMove(object sender, MouseEventArgs e)
         {
@@ -84,7 +82,7 @@ namespace QLBanDay.GUI.FormProduct
                         listProduct.hienthi();
                         this.Close();
                     }
-                    catch (Exception x)
+                    catch (Exception)
                     {
                         MessageBox.Show("sai kiểu dữ liệu", "lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
