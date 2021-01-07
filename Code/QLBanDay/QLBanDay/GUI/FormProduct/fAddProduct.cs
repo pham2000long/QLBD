@@ -42,5 +42,10 @@ namespace QLBanDay.GUI.FormProduct
         {
             commomMethodFn.Exit_Click(this);
         }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

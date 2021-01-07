@@ -115,6 +115,12 @@
     <Compile Include="GUI\User\fAddUser.Designer.cs">
       <DependentUpon>fAddUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\User\fEditUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\User\fEditUser.Designer.cs">
+      <DependentUpon>fEditUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\User\fUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,6 +156,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\User\fAddUser.resx">
       <DependentUpon>fAddUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\User\fEditUser.resx">
+      <DependentUpon>fEditUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\User\fUser.resx">
       <DependentUpon>fUser.cs</DependentUpon>

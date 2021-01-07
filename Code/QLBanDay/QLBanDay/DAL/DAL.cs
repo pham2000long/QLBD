@@ -66,10 +66,13 @@ namespace QLBanDay
             //    if (con.State == ConnectionState.Open)
             //        con.Close();
             //}
-            SqlConnection connect = getConnection();
-            connect.Open();
-            SqlCommand cmd = new SqlCommand(sql, connect);
-            cmd.ExecuteNonQuery();
+            try
+            {
+                SqlConnection connect = getConnection();
+                connect.Open();
+                SqlCommand cmd = new SqlCommand(sql, connect);
+                cmd.ExecuteNonQuery();
+            } catch (Exception) { }
         }
     }
 }

@@ -14,7 +14,7 @@ namespace QLBanDay.GUI.User
     public partial class fAddUser : Form
     {
         common commomMethodFn = new common();
-        usersBLL bll = new usersBLL();
+        BLL.usersBLL bll = new BLL.usersBLL();
         fUser f = new fUser();
         public fAddUser()
         {

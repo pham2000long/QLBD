@@ -20,6 +20,9 @@ namespace QLBanDay
                     row.DefaultCellStyle.BackColor = Color.Lavender;
                 else
                     row.DefaultCellStyle.BackColor = Color.White;
+
+                row.DefaultCellStyle.ForeColor = Color.Black;
+                //row.DefaultCellStyle.Font.Size = ;
             }
         }
 

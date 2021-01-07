@@ -36,6 +36,7 @@ namespace QLBanDay.GUI.User
             this.btnDeleteUser = new FontAwesome.Sharp.IconButton();
             this.btnAddUser = new FontAwesome.Sharp.IconButton();
             this.dgvUser = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUser)).BeginInit();
             this.SuspendLayout();
@@ -43,6 +44,7 @@ namespace QLBanDay.GUI.User
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.txtSearch);
             this.panel1.Controls.Add(this.btnSearch);
             this.panel1.Controls.Add(this.btnEditUser);
@@ -103,6 +105,7 @@ namespace QLBanDay.GUI.User
             this.btnEditUser.Text = "Sửa";
             this.btnEditUser.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEditUser.UseVisualStyleBackColor = true;
+            this.btnEditUser.Click += new System.EventHandler(this.btnEditUser_Click);
             // 
             // btnDeleteUser
             // 
@@ -145,14 +148,26 @@ namespace QLBanDay.GUI.User
             // 
             // dgvUser
             // 
+            this.dgvUser.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvUser.BackgroundColor = System.Drawing.Color.White;
             this.dgvUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvUser.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvUser.ImeMode = System.Windows.Forms.ImeMode.Katakana;
             this.dgvUser.Location = new System.Drawing.Point(0, 56);
             this.dgvUser.Name = "dgvUser";
             this.dgvUser.Size = new System.Drawing.Size(1181, 669);
             this.dgvUser.TabIndex = 5;
             this.dgvUser.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUser_CellClick);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(282, 22);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Refresh";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // fUser
             // 
@@ -179,5 +194,6 @@ namespace QLBanDay.GUI.User
         private FontAwesome.Sharp.IconButton btnDeleteUser;
         private FontAwesome.Sharp.IconButton btnAddUser;
         private System.Windows.Forms.DataGridView dgvUser;
+        private System.Windows.Forms.Button button1;
     }
 }
