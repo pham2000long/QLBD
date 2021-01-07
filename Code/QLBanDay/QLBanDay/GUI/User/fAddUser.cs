@@ -1,4 +1,5 @@
 ﻿using QLBanDay.BLL;
+using QLBanDay.DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,23 +9,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace QLBanDay.GUI.User
 {
     public partial class fAddUser : Form
     {
+        usersBLL usersbll = new usersBLL();
         common commomMethodFn = new common();
-        usersBLL bll = new usersBLL();
-        fUser ListUsers = new fUser();
+        fUser listUser;
         public fAddUser()
         {
             InitializeComponent();
         }
-        public fAddUser(fUser f)
+
+        public fAddUser(fUser listUser)
         {
             InitializeComponent();
-            ListUsers = f;
+            this.listUser = listUser;
         }
+
         private void iconMininum_Click(object sender, EventArgs e)
         {
             commomMethodFn.Mininum_Click(this);
@@ -42,29 +46,57 @@ namespace QLBanDay.GUI.User
 
         private void btnAddUser_Click(object sender, EventArgs e)
         {
-            try
+            if (openFileDialog1.FileName == null)
+            { MessageBox.Show("Chưa chọn ảnh"); }
+            else
             {
-                string fullName = txtFullname.Text;
-                string gender = cbGender.SelectedItem.ToString();
-                string account = txtAccount.Text;
-                string password = txtPassword.Text;
-                string email = txtEmail.Text;
-                string phone = txtPhone.Text;
-                string address = txtAddress.Text;
-                string roleName = cbRoleUser.SelectedItem.ToString();
-                int role = 0;
-                if (roleName.Equals("Admin"))
-                    role = 1;
-                else if (roleName.Equals("Nhân viên"))
-                    role = 2;
-                bll.insertUser(account, password, fullName, gender, phone, address, email, role);
-                ListUsers.hienthi();
-                this.Close();
-
-            } catch(Exception)
-            {
-                MessageBox.Show("Các trường không được để trống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                try
+                {
+                    int roleUser;
+                    if (cbRoleUser.Text == "Admin")
+                    {
+                        roleUser = 1;
+                    }
+                    else
+                    {
+                        roleUser = 2;
+                    }
+                    usersbll.insertUser(txtAccount.Text, txtPassword.Text, txtFullname.Text, openFileDialog1.FileName, cbGender.Text, txtPhone.Text, txtAddress.Text, txtEmail.Text, roleUser);
+                    listUser.hienthi();
+                    this.Close();
+                }
+                catch (Exception x)
+                {
+                    MessageBox.Show("Sai kiểu dữ liệu", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-}
+        }
+
+        private void btnAddAvatar_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.Title = "Chọn ảnh";
+            openFileDialog1.Filter = "Image files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png) | *.jpg; *.jpeg; *.jpe; *.jfif; *.png";
+            openFileDialog1.InitialDirectory = @"C:\picture";
+            Image img;
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+
+                try
+                {
+                    img = Image.FromFile(openFileDialog1.FileName);
+                    pbAvatar.Image = img;
+                }
+                catch (FileNotFoundException x)
+                {
+                    MessageBox.Show(x.Message);
+                }
+
+            }
+        }
+
+        private void panelInforUser_MouseDown(object sender, MouseEventArgs e)
+        {
+            commomMethodFn.MouseDown(this);
+        }
     }
 }

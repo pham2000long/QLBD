@@ -81,5 +81,12 @@ namespace QLBanDay.BLL
             dt = dal.GetTable(sql);
             return int.Parse(dt.Rows[0].ItemArray[0].ToString());
         }
+        public int getcountitem(string ten)
+        {
+            string sql = "select * from products where name='" + ten + "'";
+            DataTable dt = new DataTable();
+            dt = dal.GetTable(sql);
+            return dt.Rows.Count;
+        }
     }
 }

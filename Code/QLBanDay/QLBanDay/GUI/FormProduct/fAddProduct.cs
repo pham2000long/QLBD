@@ -78,9 +78,18 @@ namespace QLBanDay.GUI.FormProduct
                 {
                     try
                     {
-                        productbll.Insertproduct(txtProduct.Text, openFileDialog1.FileName, Int32.Parse(txtprice.Text), Int32.Parse(cbSize.Text), cbBrand.Text, colorpro, "nam", Int32.Parse(nudAmount.Text), txtDesc.Text, ID);
-                        listProduct.hienthi();
-                        this.Close();
+
+                        if(productbll.getcountitem(txtProduct.Text)==0)
+                        {
+                            productbll.Insertproduct(txtProduct.Text, openFileDialog1.FileName, Int32.Parse(txtprice.Text), Int32.Parse(cbSize.Text), cbBrand.Text, colorpro, "nam", Int32.Parse(nudAmount.Text), txtDesc.Text, ID);
+                            listProduct.hienthi();
+                            this.Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Trùng tên sản phẩm", "Thông báo");
+                        }
+                        
                     }
                     catch (Exception)
                     {

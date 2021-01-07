@@ -21,16 +21,18 @@ namespace QLBanDay.GUI.FormOrder
         int userid;
          ordersBLL ordersBLL = new ordersBLL();
         order_detailBLL order_DetailBLL = new order_detailBLL();
+        fListOrder f;
         public fAddOrder()
         {
             InitializeComponent();
             lstpro = axs.ShowProduct();
         }
-        public fAddOrder(int userid)
+        public fAddOrder(fListOrder f,int userid)
         {
             InitializeComponent();
             lstpro = axs.ShowProduct();
             this.userid = userid;
+            this.f = f;
         }
         private void btnAddProduct_Click(object sender, EventArgs e)
         {
@@ -80,7 +82,8 @@ namespace QLBanDay.GUI.FormOrder
             {
                 order_DetailBLL.insert_order_detail(orderid, pro.product_id, pro.quantity);
             }
-
+            f.hienThi();
+            this.Close();
 
         }
 

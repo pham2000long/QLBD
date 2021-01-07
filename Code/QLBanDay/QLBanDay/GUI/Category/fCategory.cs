@@ -42,8 +42,14 @@ namespace QLBanDay.GUI.FormProduct
             try
             {
                 editcategory edit = new editcategory(this);
-                edit.hienthi(dgvCategory.Rows[d].Cells[0].Value.ToString(), dgvCategory.Rows[d].Cells[1].Value.ToString(), dgvCategory.Rows[d].Cells[2].Value.ToString());
-                edit.ShowDialog();
+                try
+                {
+                    edit.hienthi(dgvCategory.Rows[d].Cells[0].Value.ToString(), dgvCategory.Rows[d].Cells[1].Value.ToString(), dgvCategory.Rows[d].Cells[2].Value.ToString());
+                    edit.ShowDialog();
+                } catch (Exception x)
+                {
+                    MessageBox.Show("Phải chọn một dòng dữ liệu","Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
             catch(NullReferenceException x)
             {
@@ -64,8 +70,14 @@ namespace QLBanDay.GUI.FormProduct
         {
             if (MessageBox.Show("Bạn có muốn xóa danh mục ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                categoryBLL.DeleteCategory(Int32.Parse(dgvCategory.Rows[d].Cells[0].Value.ToString()));
-                hienthi();
+                try
+                {
+                    categoryBLL.DeleteCategory(Int32.Parse(dgvCategory.Rows[d].Cells[0].Value.ToString()));
+                    hienthi();
+                } catch(Exception x)
+                {
+                    MessageBox.Show("Phải chọn một dòng dữ liệu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
         }
     }

@@ -17,7 +17,7 @@ namespace QLBanDay
 {
     public partial class fManager : Form
     {
-
+        int id;
         private IconButton currentBtn;
         private Panel leftBorderBtn;
         private Form currentChildForm;
@@ -25,6 +25,12 @@ namespace QLBanDay
         {
             InitializeComponent();
             hideSubMenu();
+        }
+
+        public fManager(int id)
+        {
+            InitializeComponent();
+            this.id = id;
         }
 
         private void hideSubMenu()
@@ -143,7 +149,6 @@ namespace QLBanDay
         #region button
         private void btnHome_Click(object sender, EventArgs e)
         {
-            
             if (currentChildForm != null)
             {
                 currentChildForm.Close();
@@ -178,7 +183,7 @@ namespace QLBanDay
         {
             ActivateButton(sender, RGBColors.color5);
             //showSubMenu(panelEmployee);
-            OpenChildForm(new fUser());
+            OpenChildForm(new fUser(id));
         }
 
         private void btnCustomer_Click(object sender, EventArgs e)
@@ -192,7 +197,7 @@ namespace QLBanDay
         {
             ActivateButton(sender, RGBColors.color4);
             //showSubMenu(panelBill);
-            OpenChildForm(new fListOrder());
+            OpenChildForm(new fListOrder(id));
         }
 
         private void iconLogOut_Click(object sender, EventArgs e)
@@ -248,6 +253,11 @@ namespace QLBanDay
         private void logout_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void panelTitleBar_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

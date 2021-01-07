@@ -14,9 +14,9 @@ namespace QLBanDay.GUI.FormProduct
 {
     public partial class fEditProduct : Form
     {
+        common com = new common();
         productsBLL productbll = new productsBLL();
         categoryBLL categoryBLL = new categoryBLL();
-        common commomMethodFn = new common();
         fListProduct listProduct;
         List<CategoriesDTO> categories = new List<CategoriesDTO>();
         string colorpro;
@@ -70,9 +70,17 @@ namespace QLBanDay.GUI.FormProduct
         private void btnEditProduct_Click(object sender, EventArgs e)
         {//gender
             int ID = categoryBLL.getID(cbCategori.Text);
-            productbll.Updateproduct(int.Parse(row.Cells[0].Value.ToString()),txtProduct.Text, "a", Int32.Parse(txtprice.Text), Int32.Parse(cbSize.Text), cbBrand.Text, colorpro, "nam", Int32.Parse(nudAmount.Text), txtDesc.Text, ID);
-            listProduct.hienthi();
-            this.Close();
+
+            if (productbll.getcountitem(txtProduct.Text) == 0)
+            {
+                productbll.Updateproduct(int.Parse(row.Cells[0].Value.ToString()), txtProduct.Text, "a", Int32.Parse(txtprice.Text), Int32.Parse(cbSize.Text), cbBrand.Text, colorpro, "nam", Int32.Parse(nudAmount.Text), txtDesc.Text, ID);
+                listProduct.hienthi();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Trùng tên sản phẩm", "Thông báo");
+            }
         }
 
         private void iconMininum_Click(object sender, EventArgs e)
@@ -104,6 +112,11 @@ namespace QLBanDay.GUI.FormProduct
                 img = Image.FromFile(openFileDialog1.FileName);
                 pbavatar.Image = img;
             }
+        }
+
+        private void panel3_MouseDown(object sender, MouseEventArgs e)
+        {
+            com.MouseDown(this);
         }
     }
 }

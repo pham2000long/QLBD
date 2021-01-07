@@ -14,6 +14,7 @@ namespace QLBanDay.GUI.Category
 {
     public partial class fAddCategory : Form
     {
+        common com = new common();
         fCategory fcategory;
         categoryBLL categoryBLL = new categoryBLL();
         common commomMethodFn = new common();
@@ -48,9 +49,22 @@ namespace QLBanDay.GUI.Category
 
         private void btnAddProduct_Click(object sender, EventArgs e)
         {
-            categoryBLL.InsertCategory(txtName.Text, txtDescription.Text);
-            fcategory.hienthi();
-            this.Close();
+            if(categoryBLL.getitem(txtName.Text)==0)
+            {
+                categoryBLL.InsertCategory(txtName.Text, txtDescription.Text);
+                fcategory.hienthi();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Trùng tên danh mục", "Thông báo");
+            }
+            
+        }
+
+        private void panel3_MouseDown(object sender, MouseEventArgs e)
+        {
+            com.MouseDown(this);
         }
     }
 }

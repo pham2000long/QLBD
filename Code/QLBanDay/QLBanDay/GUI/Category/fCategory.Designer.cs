@@ -31,6 +31,7 @@ namespace QLBanDay.GUI.FormProduct
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtSearch = new System.Windows.Forms.TextBox();
@@ -179,6 +180,14 @@ namespace QLBanDay.GUI.FormProduct
             this.dgvCategory.GridColor = System.Drawing.Color.White;
             this.dgvCategory.Location = new System.Drawing.Point(0, 56);
             this.dgvCategory.Name = "dgvCategory";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.LightBlue;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCategory.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvCategory.RowHeadersWidth = 40;
             this.dgvCategory.Size = new System.Drawing.Size(963, 669);
             this.dgvCategory.TabIndex = 3;
@@ -220,6 +229,7 @@ namespace QLBanDay.GUI.FormProduct
             this.updated_at.DataPropertyName = "updated_at";
             this.updated_at.HeaderText = "Ngay sửa";
             this.updated_at.Name = "updated_at";
+            this.updated_at.ReadOnly = true;
             // 
             // fCategory
             // 
