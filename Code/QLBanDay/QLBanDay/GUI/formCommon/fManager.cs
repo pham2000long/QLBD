@@ -11,6 +11,7 @@ using FontAwesome.Sharp;
 using System.Runtime.InteropServices;
 using QLBanDay.GUI.FormProduct;
 using QLBanDay.GUI.User;
+using QLBanDay.GUI.FormOrder;
 
 namespace QLBanDay
 {
@@ -191,7 +192,7 @@ namespace QLBanDay
         {
             ActivateButton(sender, RGBColors.color4);
             //showSubMenu(panelBill);
-            //OpenChildForm(new fBill());
+            OpenChildForm(new fListOrder());
         }
 
         private void iconLogOut_Click(object sender, EventArgs e)

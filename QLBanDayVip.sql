@@ -42,6 +42,7 @@ create table users
 	username nvarchar(255) not null,
 	password nvarchar(255) not null,
 	fullname nvarchar(255),
+	avatar nvarchar(255),
 	-- sửa giới tính từ bit => nvarchar
 	gender nvarchar(5),  -- 0 là Nam, 1 là Nữ
 	phone int,
@@ -81,5 +82,7 @@ create table order_details
 );
 go
 
+insert into users(username, password,fullname,gender, roles) values
+('admin','123456', 'Pham Van Long', 'Nam', '1')
+
 select * from products;
-delete from products

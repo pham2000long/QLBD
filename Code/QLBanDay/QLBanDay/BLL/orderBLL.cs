@@ -17,17 +17,21 @@ namespace QLBanDay.BLL
             dt = dal.GetTable(sql);
             return dt;
         }
-        public void Insertorder(string fullname, bool gender, Int32 phone,
-            string address, string email, string note, Int32 price_total, //X price_total update csdl
+        public void Insertorder(string fullname, string gender, Int32 phone,
+            string address, string email, string note,int price_total, //X price_total update csdl
             Int32 status, int user_id)//X avatar??? update csdl
         {
             string sql = "insert into orders (fullname,gender,phone,address,email " +
-                ",note,price_total ,status,user_id)" +
+                ",note,price_total,status,user_id)" +
                 " values('" + fullname + "','" + gender + "','" + phone + "','" + address + "'," +
-                "'" + email + "','" + note + "','" + price_total + "','" + status + "','" + user_id + "')";
+                "'" + email + "','" + note + "','"+ price_total + "','" + status + "','" + user_id + "')";
             dal.ExecuteNonQuery(sql);
         }
-        public void Updateorder(int ma,string fullname, bool gender, Int32 phone,
+        public void tongtien(int id,int tongtien)
+        {
+            string sql= "update oreders set tongtien='"+ tongtien + "' where id='"+id+"'";
+        }
+        public void Updateorder(int ma,string fullname, string gender, Int32 phone,
             string address, string email, string note, Int32 price_total, //X price_total update csdl
             Int32 status, int user_id)//X avatar??? update csdl
         {
@@ -42,6 +46,13 @@ namespace QLBanDay.BLL
         {
             string sql = "delete orders where id= '" + ma + "'";
             dal.ExecuteNonQuery(sql);
+        }
+        public int getid()
+        {
+            string sql = "select max(id) from orders";
+            DataTable dt = dal.GetTable(sql);
+            return int.Parse(dt.Rows[0].ItemArray[0].ToString());
+                
         }
     }
 }

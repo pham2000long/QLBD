@@ -21,7 +21,11 @@ namespace QLBanDay.GUI.User
         {
             InitializeComponent();
         }
-
+        public void hienthi()
+        {
+            List<UsersDTO> dt = userBLL.ListUsers();
+            dgvUser.DataSource = dt;
+        }
         private void btnAddUser_Click(object sender, EventArgs e)
         {
             fAddUser f = new fAddUser();
@@ -45,7 +49,7 @@ namespace QLBanDay.GUI.User
                 user.Phone = row["phone"].ToString();
                 user.Address = row["address"].ToString();
                 user.Email = row["email"].ToString();
-                user.Avatar = row["avatar"].ToString();
+                //user.Avatar = row["avatar"].ToString();
                 //user.Roles = int.Parse(row["roles"].ToString()) == 1 ? "Admin" : "Nhân viên";
                 //user.Created_at = DateTime.Parse(row["created_at"].ToString());
                 user.Updated_at = DateTime.Now;
@@ -56,7 +60,6 @@ namespace QLBanDay.GUI.User
             if(dgvUser.Rows.Count > 0)
             {
                 btnDeleteUser.Enabled = true;
-                btnEditUser.Enabled = true;
             }
         }
 
@@ -74,6 +77,13 @@ namespace QLBanDay.GUI.User
         {
             //Console.WriteLine();
             fUser.index = int.Parse(dgvUser.Rows[e.RowIndex].Cells[0].Value.ToString());
+        }
+
+        private void dgvUser_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+
+
         }
     }
 }
